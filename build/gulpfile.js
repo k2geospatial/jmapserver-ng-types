@@ -32,7 +32,7 @@ const packageJSON = JSON.parse(fs.readFileSync("../package.json"))
 const newNpmVersion = packageJSON.version
 const DOC_LATEST_DIR = join(ROOT_DIR, "./docs/latest")
 const DOC_DIR = process.env.DOC_DIR ? join(ROOT_DIR, process.env.DOC_DIR) : join(DOC_ROOT_DIR, `v${newNpmVersion}`)
-const SOURCE_DIRS = process.env.SOURCE_DIRS ? process.env.SOURCE_DIRS : "jmap-app-js"
+const SOURCE_DIRS = process.env.SOURCE_DIRS ? process.env.SOURCE_DIRS : "jmapcloud-ng"
 
 console.log('Directories :')
 console.log(`  Doc dir  => ${DOC_ROOT_DIR}`)
@@ -42,17 +42,17 @@ console.log(`  Src dir => ${SRC_DIR}`)
 
 gulp.task('copy', cb => {
   if (!process.env.COPY_DIR) {
-    throw Error("Missing COPY_DIR env variable. Ex : set COPY_DIR='/Users/lmignonat/Desktop/'")
+    throw Error("Missing COPY_DIR env variable. Ex : set COPY_DIR='/Users/myuser/Desktop/'")
   }
   const sourceDirs = SOURCE_DIRS.split(",").map(s => s.trim())
   for (const sourceDir of sourceDirs) {
     console.info(`Copy app files in "${join(process.env.COPY_DIR, `${sourceDir}`)}"`)
     gulp.src([ join(ROOT_DIR, 'public/**/*') ])
-        .pipe(gulp.dest(join(process.env.COPY_DIR, `${sourceDir}/node_modules/jmap-app/public`)))
+        .pipe(gulp.dest(join(process.env.COPY_DIR, `${sourceDir}/node_modules/jmapcloud-ng-types/public`)))
     gulp.src([ join(ROOT_DIR, 'index.ts') ])
-        .pipe(gulp.dest(join(process.env.COPY_DIR, `${sourceDir}/node_modules/jmap-app`)))
+        .pipe(gulp.dest(join(process.env.COPY_DIR, `${sourceDir}/node_modules/jmapcloud-ng-types`)))
     gulp.src([ join(ROOT_DIR, 'all-enums.ts') ])
-        .pipe(gulp.dest(join(process.env.COPY_DIR, `${sourceDir}/node_modules/jmap-app`)))
+        .pipe(gulp.dest(join(process.env.COPY_DIR, `${sourceDir}/node_modules/jmapcloud-ng-types`)))
   }
   cb()
 })
@@ -92,7 +92,7 @@ gulp.task("typedoc", cb => {
   return gulp
       .src([
         "../public/**/*.ts",
-        "../node_modules/jmap-core/public/**/*.ts",
+        "../node_modules/jmapcloud-ng-core-types/public/**/*.ts",
       ])
       .pipe(typedoc({
           readme: "./public-doc-readme.md",
@@ -102,7 +102,7 @@ gulp.task("typedoc", cb => {
           tsconfig: "./tsconfig.json",
           includeDeclarations: true,
           out: DOC_DIR,
-          name: "jmap-app",
+          name: "jmapcloud-ng-types",
           hideGenerator: true,
           version: false,
           ignoreCompilerErrors: false,

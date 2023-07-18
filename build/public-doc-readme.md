@@ -1,1 +1,1 @@
-**JMap Application documentation**
+**JMap Cloud NG documentation**

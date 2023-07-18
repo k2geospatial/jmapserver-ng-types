@@ -3,7 +3,7 @@
  * 
  * It offers a way to add your own panel, map interactor, redux store data, etc ...
  * 
- * This way you can fully customize your JMap application with your own code, written with your favourite dev tools.
+ * This way you can fully customize your JMap Cloud NG with your own code, written with your favourite dev tools.
  */
 declare interface JAppExtension extends JCoreExtension {
   /**

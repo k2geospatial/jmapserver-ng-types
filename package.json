@@ -1,7 +1,7 @@
 {
-  "name": "jmap-app",
-  "version": "2.10.6",
-  "description": "JMap Application",
+  "name": "jmapcloud-ng-types",
+  "version": "0.0.0",
+  "description": "JMap Cloud specific version of JMap Cloud NG types and interfaces",
   "main": "src/app.ts",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
@@ -12,18 +12,18 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/k2geospatial/jmap-app.git"
+    "url": "git+https://github.com/k2geospatial/jmapcloud-ng-types.git"
   },
-  "author": "Laurent Mignonat",
+  "author": "K2 Geospatial",
   "license": "ISC",
   "bugs": {
-    "url": "https://github.com/k2geospatial/jmap-app/issues"
+    "url": "https://github.com/k2geospatial/jmapcloud-ng-types/issues"
   },
-  "homepage": "https://github.com/k2geospatial/jmap-app#readme",
+  "homepage": "https://github.com/k2geospatial/jmapcloud-ng-types#readme",
   "devDependencies": {
     "gulp": "^4.0.2",
     "gulp-typedoc": "^2.2.2",
-    "jmap-core": "2.10.6",
+    "jmapcloud-ng-core-types": "0.0.4",
     "typedoc": "^0.15.0"
   }
 }

@@ -1,4 +1,4 @@
-import { JEventModule } from "jmap-core"
+import { JEventModule } from "jmapcloud-ng-core-types"
 
 export interface JAppState {
   panel: JAppPanelState
