@@ -2,6 +2,7 @@
   "compilerOptions": {
     "outDir": "../public/transpiled",
     "baseUrl": "../src",
+    "types": ["maplibre-gl", "react"],
     "strict": true,
     "sourceMap": true,
     "noImplicitAny": true,
