@@ -23,7 +23,7 @@
   "devDependencies": {
     "gulp": "^4.0.2",
     "gulp-typedoc": "^2.2.2",
-    "jmapcloud-ng-core-types": "0.0.5",
+    "jmapcloud-ng-core-types": "0.1.0",
     "@types/react": "^16.8.3",
     "maplibre-gl": "^1.15.3",
     "typedoc": "^0.15.0"
