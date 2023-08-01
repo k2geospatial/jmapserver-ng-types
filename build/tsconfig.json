@@ -1,7 +1,7 @@
 {
   "compilerOptions": {
     "outDir": "../public/transpiled",
-    "baseUrl": "../src",
+    "baseUrl": "../public",
     "types": ["maplibre-gl", "react"],
     "strict": true,
     "allowSyntheticDefaultImports": true, // needed for MapLibre https://www.typescriptlang.org/tsconfig#allowSyntheticDefaultImports

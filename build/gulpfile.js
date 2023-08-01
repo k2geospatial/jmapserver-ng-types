@@ -98,7 +98,7 @@ gulp.task("typedoc", cb => {
       ])
       .pipe(gulpTypedoc({
           readme: "./public-doc-readme.md",
-          excludeExternals: true,
+          excludeExternals: false, // TODO: find a way to better integrate jmapcloud-ng-core-types
           excludePrivate: true,
           tsconfig: "./tsconfig.json",
           out: DOC_DIR,
