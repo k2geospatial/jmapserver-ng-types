@@ -7,7 +7,8 @@ const join = path.join // shortcut
 const fs = require('fs')
 const gulp = require('gulp')
 const execSync = require('child_process').execSync
-const typedoc = require("gulp-typedoc")
+// TODO: create a PR for this fork or find another solution
+const gulpTypedoc = require("gulp-typedoc-k2")
 
 const existEnvConfigFile = fs.existsSync("env-config.js")
 if (existEnvConfigFile) {
@@ -27,7 +28,7 @@ if (existEnvConfigFile) {
 // __dirname is the directory witch contains the gulpfile.js file
 const ROOT_DIR = join(__dirname, '..')
 const DOC_ROOT_DIR = join(__dirname, '../docs')
-const SRC_DIR = join(ROOT_DIR, '/src/public')
+const SRC_DIR = join(ROOT_DIR, "/public")
 const packageJSON = JSON.parse(fs.readFileSync("../package.json"))
 const newNpmVersion = packageJSON.version
 const DOC_LATEST_DIR = join(ROOT_DIR, "./docs/latest")
@@ -86,27 +87,26 @@ gulp.task('commit', cb => {
 /******************************** DOCUMENTATION ********************************/
 
 // https://typedoc.org/api/
+// see the following for typescript language level compatibility: https://typedoc.org/guides/installation/#requirements
 gulp.task("typedoc", cb => {
   console.log(`DOC : generating doc in directory "${DOC_DIR}"`)
   console.log(`DOC : file://${DOC_DIR}/index.html`)
-  return gulp
+  gulp
       .src([
         "../public/**/*.ts",
         "../node_modules/jmapcloud-ng-core-types/public/**/*.ts",
       ])
-      .pipe(typedoc({
+      .pipe(gulpTypedoc({
           readme: "./public-doc-readme.md",
-          mode: "file",
-          excludeExternals: true,
+          excludeExternals: false, // TODO: find a way to better integrate jmapcloud-ng-core-types
           excludePrivate: true,
           tsconfig: "./tsconfig.json",
-          includeDeclarations: true,
           out: DOC_DIR,
           name: "jmapcloud-ng-types",
           hideGenerator: true,
-          version: false,
-          ignoreCompilerErrors: false,
-      }))
+          version: false
+      }).on("end", cb)
+      )
 })
 
 /********************************** PUBLIC TASKS **********************************/

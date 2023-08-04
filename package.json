@@ -1,6 +1,6 @@
 {
   "name": "jmapcloud-ng-types",
-  "version": "0.0.1",
+  "version": "0.3.0",
   "description": "JMap Cloud specific version of JMap Cloud NG types and interfaces",
   "main": "src/app.ts",
   "scripts": {
@@ -22,8 +22,10 @@
   "homepage": "https://github.com/k2geospatial/jmapcloud-ng-types#readme",
   "devDependencies": {
     "gulp": "^4.0.2",
-    "gulp-typedoc": "^2.2.2",
-    "jmapcloud-ng-core-types": "0.0.4",
-    "typedoc": "^0.15.0"
+    "gulp-typedoc-k2": "^3.0.2-k2.1",
+    "jmapcloud-ng-core-types": "0.3.0",
+    "@types/react": "^16.8.3",
+    "maplibre-gl": "^3.2.1",
+    "typedoc": "^0.24.8"
   }
 }

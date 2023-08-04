@@ -6,7 +6,7 @@ declare interface JAppAnnotation {
 
 declare interface JappTextMarkerProperties {
   id: string
-  location: mapboxgl.LngLatLike
+  location: maplibregl.LngLatLike
   textSize: number
   textColor: string
   textRotation: number
