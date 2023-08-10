@@ -19,7 +19,6 @@
     ]
   },
   "include": [
-    "../public/**/*",
-    "../node_modules/jmapcloud-ng-core-types/**/*"
+    "./JMap.d.ts"
   ]
 }
