@@ -99,7 +99,7 @@ gulp.task("typedoc", cb => {
     --excludePrivate true \\
     --tsconfig ./tsconfig.json \\
     --out ${DOC_DIR} \\
-    --name "JMap Cloud NG types" \\
+    --name "JMap Cloud NG Types" \\
     --hideGenerator true \\
     --version false \\
     --disableSources true \\
