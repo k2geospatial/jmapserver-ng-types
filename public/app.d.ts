@@ -4,11 +4,11 @@ declare namespace JMap {
    *
    * This is the JMap Cloud NG API documentation.
    *
-   * JMap Cloud NG depends on the JMap Cloud NG Core library ([[JMap]]).
+   * JMap Cloud NG depends on the JMap Cloud NG Core library ({@link JMap}).
    *
    * Examples are available <a href="https://doc.k2geospatial.com/jmap/doc/ng_dev/examples.html" target="_blank">here</a>.
    *
-   * You can customize JMap Cloud NG by providing startup options ([[JApplicationOptions]]).
+   * You can customize JMap Cloud NG by providing startup options ({@link JApplicationOptions}).
    */
   namespace Application {
     /**
@@ -954,7 +954,7 @@ declare namespace JMap {
       /**
        * **JMap.Application.Measure.setMeasurementSystem**
        * 
-       * Sets the measurement system used by the Measurements Panel. **This setting is only taken into account when you draw measurements using the Measurements Panel. It does not affect jmapcloud-ng-core methods like [[JMap.Geometry.getDistance]], which always return geodetic values.**
+       * Sets the measurement system used by the Measurements Panel. **This setting is only taken into account when you draw measurements using the Measurements Panel. It does not affect jmapcloud-ng-core methods like {@link JMap.Geometry.getDistance}, which always return geodetic values.**
        * 
        * **This method should not be called in regular situations.** 
        * 
@@ -1259,7 +1259,7 @@ declare namespace JMap {
            *
            * Tests if the layer tree filters are applied.
            *
-           * Layer tree filters are applied (in action) only if the filtering is active ([[JMap.Application.Layer.Tree.Filter.isActive]] returns true)
+           * Layer tree filters are applied (in action) only if the filtering is active ({@link JMap.Application.Layer.Tree.Filter.isActive} returns true)
            * and either one of those two conditions are met:
            *
            * a) the name filter contains at least 2 characters
@@ -1288,7 +1288,7 @@ declare namespace JMap {
            *
            * Layer tree filters are active, but initially not applied, when the user activates the Filter user interface either by clicking on a button
            * or by calling a JMap Cloud NG API method to activate it.
-           * See [[JMap.Application.Layer.Tree.Filter.isApplied]] for more details.
+           * See {@link JMap.Application.Layer.Tree.Filter.isApplied} for more details.
            *
            * @example ```ts
            *
@@ -1308,7 +1308,7 @@ declare namespace JMap {
            *
            * Layer tree filters are active, but initially not applied, when the user activates the Filter user interface either by clicking on a button
            * or by calling a JMap Cloud NG API method to activate it.
-           * See [[JMap.Application.Layer.Tree.Filter.isApplied]] for more details
+           * See {@link JMap.Application.Layer.Tree.Filter.isApplied} for more details
            *
            * @param active a boolean
            * @example ```ts
@@ -1437,7 +1437,7 @@ declare namespace JMap {
           /**
            * **JMap.Application.Layer.Tree.Filter.add**
            *
-           * Adds a filter. The list of available metadata schema items can be retieved by calling [[JMap.Layer.getMetadataSchema]].
+           * Adds a filter. The list of available metadata schema items can be retieved by calling {@link JMap.Layer.getMetadataSchema}.
            *
            * @param filter a JAppAnyLayerFilter object
            * @example ```ts
@@ -2199,7 +2199,7 @@ declare namespace JMap {
        *
        * @deprecated will be removed in the futur
        * @throws if format is incorrect
-       * @param the paper format object or a [[JAPP_PRINT_PAPER_SIZES]]
+       * @param the paper format object or a {@link JAPP_PRINT_PAPER_SIZES}
        * @example ```ts
        *
        * // set the letter paper format
@@ -2493,7 +2493,7 @@ declare namespace JMap {
        *
        * Here you can manage all JMap Cloud NG high level event listeners.
        *
-       * Click to see all events available: ***[[JMap.Application.Event.Main.on]]***.
+       * Click to see all events available: ***{@link JMap.Application.Event.Main.on}***.
        */
       namespace Main {
         /**
@@ -2590,7 +2590,7 @@ declare namespace JMap {
        *
        * Here you can manage all JMap Cloud NG layer event listeners.
        *
-       * Click to see all events available: ***[[JMap.Application.Event.Layer.on]]***.
+       * Click to see all events available: ***{@link JMap.Application.Event.Layer.on}***.
        */
       namespace Layer {
         /**
@@ -2685,7 +2685,7 @@ declare namespace JMap {
        *
        * Here you can manage all JMap Cloud NG extension event listeners.
        *
-       * Click to see all events available: ***[[JMap.Application.Event.Extension.on]]***.
+       * Click to see all events available: ***{@link JMap.Application.Event.Extension.on}***.
        */
       namespace Extension {
         /**
@@ -2774,7 +2774,7 @@ declare namespace JMap {
        *
        * Here you can manage all JMap Cloud NG high level event listeners.
        *
-       * Click to see all events available: ***[[JMap.Application.Event.Main.on]]***.
+       * Click to see all events available: ***{@link JMap.Application.Event.Main.on}***.
        */
       namespace UI {
         /**
@@ -2886,7 +2886,7 @@ declare namespace JMap {
        *
        * Here you can manage all JMap Cloud NG map context event listeners.
        *
-       * Click to see all events available: ***[[JMap.Application.Event.MapContext.on]]***.
+       * Click to see all events available: ***{@link JMap.Application.Event.MapContext.on}***.
        */
       namespace MapContext {
         /**
@@ -2995,7 +2995,7 @@ declare namespace JMap {
        * **Displaying the action's label in the UI**
        * The action's label will be translated by JMap Cloud NG translation engine if a JTranslationItem is passed,
        * otherwise the simple string will be used.
-       * (see See [[JMap.Language.translate]] and [[JMap.Language.addBundle]] for more details on translations)
+       * (see See {@link JMap.Language.translate} and {@link JMap.Language.addBundle} for more details on translations)
        *
        * @param action : the action to add
        * @param index : will insert at a specific index in the menu. Start at 0. If index is not correct insert at the end
@@ -3233,7 +3233,7 @@ declare namespace JMap {
        *
        * If overlay is already displaying a previous message, it will display only the new message and hide the previous message (until you close the new message).
        *
-       * Overlay is displayed all the time until you call the method [[JMap.Application.Message.closeWaitingOverlay]].
+       * Overlay is displayed all the time until you call the method {@link JMap.Application.Message.closeWaitingOverlay}.
        *
        * This method is used to close one or more messages:
        *  - Called without params, it will close all messages
