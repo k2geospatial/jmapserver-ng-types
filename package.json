@@ -22,7 +22,7 @@
   "homepage": "https://github.com/k2geospatial/jmapcloud-ng-types#readme",
   "devDependencies": {
     "gulp": "^4.0.2",
-    "jmapcloud-ng-core-types": "0.3.2",
+    "jmapcloud-ng-core-types": "0.4.0",
     "maplibre-gl": "^3.2.1",
     "typedoc": "^0.24.8"
   }
