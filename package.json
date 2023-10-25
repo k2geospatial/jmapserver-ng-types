@@ -1,6 +1,6 @@
 {
   "name": "jmapcloud-ng-types",
-  "version": "0.4.1",
+  "version": "0.4.2",
   "description": "JMap Cloud specific version of JMap Cloud NG types and interfaces",
   "main": "src/app.ts",
   "scripts": {
