@@ -1,2 +1,9 @@
+.vscode
 build
 docs
+node_modules
+_config.yml
+.gitignore
+.prettierrc
+package-lock.json
+tsconfig.json
