@@ -1,14 +1,15 @@
 {
   "name": "jmapcloud-ng-types",
-  "version": "0.3.3",
+  "version": "0.4.2",
   "description": "JMap Cloud specific version of JMap Cloud NG types and interfaces",
   "main": "src/app.ts",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "pub": "export NODE_ENV='production'; gulp publish --gulpfile build/gulpfile.js;",
-    "copy": "export NODE_ENV='production'; gulp copy --gulpfile build/gulpfile.js;",
-    "commit-doc": "export NODE_ENV='production'; gulp commit-doc --gulpfile build/gulpfile.js;",
-    "doc-test": "export DOC_DIR='./docs/latest'; gulp typedoc --gulpfile build/gulpfile.js;"
+    "pub": "export NODE_ENV='production'; node build/buildfile.js publish;",
+    "copy": "export NODE_ENV='production'; node build/buildfile.js copy;",
+    "commit-doc": "export NODE_ENV='production'; node build/buildfile.js commit-doc;",
+    "doc-test": "export DOC_DIR='./docs/latest'; node build/buildfile.js doc-test;",
+    "copy-latest": "node build/buildfile.js copy-latest;"
   },
   "repository": {
     "type": "git",
@@ -21,10 +22,10 @@
   },
   "homepage": "https://github.com/k2geospatial/jmapcloud-ng-types#readme",
   "devDependencies": {
-    "gulp": "^4.0.2",
-    "jmapcloud-ng-core-types": "0.3.2",
-    "@types/react": "^16.8.3",
+    "@types/react": "18.2.21",
+    "jmapcloud-ng-core-types": "0.4.2",
     "maplibre-gl": "^3.2.1",
+    "react": "^18.2.0",
     "typedoc": "^0.24.8"
   }
 }
