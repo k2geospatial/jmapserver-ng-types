@@ -23,7 +23,7 @@
   "homepage": "https://github.com/k2geospatial/jmapcloud-ng-types#readme",
   "devDependencies": {
     "@types/react": "18.2.21",
-    "jmapcloud-ng-core-types": "0.4.2",
+    "jmapcloud-ng-core-types": "0.4.5",
     "maplibre-gl": "^3.2.1",
     "react": "^18.2.0",
     "typedoc": "^0.24.8"
