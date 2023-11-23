@@ -2,13 +2,13 @@ declare namespace JMap {
   /**
    * **JMap.Application**
    *
-   * This is the JMap Cloud NG API documentation.
+   * This is the JMap Server NG API documentation.
    *
-   * JMap Cloud NG depends on the JMap Cloud NG Core library ({@link JMap}).
+   * JMap Server NG depends on the JMap Server NG Core library ({@link JMap}).
    *
    * Examples are available <a href="https://doc.k2geospatial.com/jmap/doc/ng_dev/examples.html" target="_blank">here</a>.
    *
-   * You can customize JMap Cloud NG by providing startup options ({@link JApplicationOptions}).
+   * You can customize JMap Server NG by providing startup options ({@link JApplicationOptions}).
    */
   namespace Application {
     /**
@@ -42,11 +42,11 @@ declare namespace JMap {
     /**
      * **JMap.Application.openDocumentation**
      *
-     * Opens JMap Cloud NG's online JS API documentation, in a new tab.
+     * Opens JMap Server NG's online JS API documentation, in a new tab.
      *
      * @example ```ts
      *
-     * // open JMap Cloud NG's online documentation, in a new tab
+     * // open JMap Server NG's online documentation, in a new tab
      * JMap.Application.openDocumentation()
      * ```
      */
@@ -55,11 +55,11 @@ declare namespace JMap {
     /**
      * **JMap.Application.openUserManual**
      *
-     * Opens JMap Cloud NG's online user manual, in a new tab.
+     * Opens JMap Server NG's online user manual, in a new tab.
      *
      * @example ```ts
      *
-     * // Open JMap Cloud NG's online user manual, in a new tab
+     * // Open JMap Server NG's online user manual, in a new tab
      * JMap.Application.openUserManual()
      * ```
      */
@@ -417,7 +417,7 @@ declare namespace JMap {
       /**
        * **JMap.Application.Panel.activateById**
        *
-       * Changes the JMap Cloud NG panel.
+       * Changes the JMap Server NG panel.
        *
        * If no panelId is provided, will activate the "layer" panel by default, if the
        * "layer" panel is disabled will activate the first available panel.
@@ -450,7 +450,7 @@ declare namespace JMap {
       /**
        * **JMap.Application.Panel.add**
        *
-       * Adds a custom panel for a given panel definition to JMap Cloud NG.
+       * Adds a custom panel for a given panel definition to JMap Server NG.
        *
        * @throws if panel format is not correct
        * @param panel an object that is the definition of the new panel
@@ -475,7 +475,7 @@ declare namespace JMap {
       /**
        * **JMap.Application.Panel.removeById**
        *
-       * Removes a panel for a given panel id from JMap Cloud NG.
+       * Removes a panel for a given panel id from JMap Server NG.
        *
        * If the panel was active, will activate the first panel the application finds.
        *
@@ -954,7 +954,7 @@ declare namespace JMap {
       /**
        * **JMap.Application.Measure.setMeasurementSystem**
        * 
-       * Sets the measurement system used by the Measurements Panel. **This setting is only taken into account when you draw measurements using the Measurements Panel. It does not affect jmapcloud-ng-core methods like {@link JMap.Geometry.getDistance}, which always return geodetic values.**
+       * Sets the measurement system used by the Measurements Panel. **This setting is only taken into account when you draw measurements using the Measurements Panel. It does not affect jmapserver-ng-core methods like {@link JMap.Geometry.getDistance}, which always return geodetic values.**
        * 
        * **This method should not be called in regular situations.** 
        * 
@@ -1182,7 +1182,7 @@ declare namespace JMap {
     /**
      * **JMap.Application.Project**
      *
-     * You can manage all things related to JMap Cloud NG Core project and JMap Cloud NG here.
+     * You can manage all things related to JMap Server NG Core project and JMap Server NG here.
      */
     namespace Project {
       /**
@@ -1190,7 +1190,7 @@ declare namespace JMap {
        *
        * Activate the project for a given project id.
        *
-       * If you use JMap Cloud NG, use this function instaed of JMap.Project.activateById.
+       * If you use JMap Server NG, use this function instaed of JMap.Project.activateById.
        *
        * This function does the same as JMap.Project.activateById but also manages things for the application UI.
        *
@@ -1287,7 +1287,7 @@ declare namespace JMap {
            * Tests if the layer tree filters are active.
            *
            * Layer tree filters are active, but initially not applied, when the user activates the Filter user interface either by clicking on a button
-           * or by calling a JMap Cloud NG API method to activate it.
+           * or by calling a JMap Server NG API method to activate it.
            * See {@link JMap.Application.Layer.Tree.Filter.isApplied} for more details.
            *
            * @example ```ts
@@ -1307,7 +1307,7 @@ declare namespace JMap {
            * Tests if the layer tree filters are active.
            *
            * Layer tree filters are active, but initially not applied, when the user activates the Filter user interface either by clicking on a button
-           * or by calling a JMap Cloud NG API method to activate it.
+           * or by calling a JMap Server NG API method to activate it.
            * See {@link JMap.Application.Layer.Tree.Filter.isApplied} for more details
            *
            * @param active a boolean
@@ -1708,7 +1708,7 @@ declare namespace JMap {
          *
          * @example ```ts
          *
-         * // return the dom container id, ex : "jmapcloud-ng-types"
+         * // return the dom container id, ex : "jmapserver-ng-types"
          * JMap.Application.UI.Container.getId()
          * ```
          */
@@ -1790,7 +1790,7 @@ declare namespace JMap {
         /**
          * **JMap.Application.UI.SidePanel.isVisible**
          *
-         * Returns true if the JMap Cloud NG main panel on the left is opened.
+         * Returns true if the JMap Server NG main panel on the left is opened.
          *
          * @example ```ts
          *
@@ -1803,7 +1803,7 @@ declare namespace JMap {
         /**
          * **JMap.Application.UI.SidePanel.toggleVisibility**
          *
-         * Changes the JMap Cloud NG main panel on the left visibility.
+         * Changes the JMap Server NG main panel on the left visibility.
          *
          * If the panel is open, it will close.
          *
@@ -2469,7 +2469,7 @@ declare namespace JMap {
     /**
      * **JMap.Application.Event**
      *
-     * From this section you can manage your own event listeners reacting to JMap Cloud NG library events.
+     * From this section you can manage your own event listeners reacting to JMap Server NG library events.
      *
      * For all your listeners, you need to provide a listener id. We introduced this notion of listener ids in order
      * to be able to know what's the problem if something goes wrong in a listener.
@@ -2485,13 +2485,13 @@ declare namespace JMap {
      *
      * Listeners can be deactivated and reactivated.
      *
-     * Deactivating a listener keeps it in the JMap Cloud NG library, but ignores it when an event is triggered.
+     * Deactivating a listener keeps it in the JMap Server NG library, but ignores it when an event is triggered.
      */
     namespace Event {
       /**
        * ***JMap.Application.Event.Main***
        *
-       * Here you can manage all JMap Cloud NG high level event listeners.
+       * Here you can manage all JMap Server NG high level event listeners.
        *
        * Click to see all events available: ***{@link JMap.Application.Event.Main.on}***.
        */
@@ -2499,7 +2499,7 @@ declare namespace JMap {
         /**
          * ***JMap.Application.Event.Main.on***
          *
-         * Here you have all JMap Cloud NG high level available events on which you can attach a listener.
+         * Here you have all JMap Server NG high level available events on which you can attach a listener.
          */
         namespace on {
           /**
@@ -2573,7 +2573,7 @@ declare namespace JMap {
          *
          * If the listener doesn't exist, does nothing.
          *
-         * Removes the listener from JMap Cloud NG. The listener is deleted and never called again after that.
+         * Removes the listener from JMap Server NG. The listener is deleted and never called again after that.
          *
          * @param listenerId The listener id
          * @example ```ts
@@ -2588,7 +2588,7 @@ declare namespace JMap {
       /**
        * ***JMap.Application.Event.Layer***
        *
-       * Here you can manage all JMap Cloud NG layer event listeners.
+       * Here you can manage all JMap Server NG layer event listeners.
        *
        * Click to see all events available: ***{@link JMap.Application.Event.Layer.on}***.
        */
@@ -2596,7 +2596,7 @@ declare namespace JMap {
         /**
          * ***JMap.Application.Event.Layer.on***
          *
-         * Here you have all JMap Cloud NG available layer events on which you can attach a listener.
+         * Here you have all JMap Server NG available layer events on which you can attach a listener.
          */
         namespace on {
           /**
@@ -2668,7 +2668,7 @@ declare namespace JMap {
          *
          * If the listener doesn't exist, does nothing.
          *
-         * Removes the listener from JMap Cloud NG. The listener is deleted and never called again after that.
+         * Removes the listener from JMap Server NG. The listener is deleted and never called again after that.
          *
          * @param listenerId The listener id
          * @example ```ts
@@ -2683,7 +2683,7 @@ declare namespace JMap {
       /**
        * ***JMap.Application.Event.Extension***
        *
-       * Here you can manage all JMap Cloud NG extension event listeners.
+       * Here you can manage all JMap Server NG extension event listeners.
        *
        * Click to see all events available: ***{@link JMap.Application.Event.Extension.on}***.
        */
@@ -2691,13 +2691,13 @@ declare namespace JMap {
         /**
          * ***JMap.Application.Event.Extension.on***
          *
-         * Here you have all JMap Cloud NG available extension events on which you can attach a listener.
+         * Here you have all JMap Server NG available extension events on which you can attach a listener.
          */
         namespace on {
           /**
            * ***JMap.Application.Event.Extension.on.registration***
            *
-           * This event is triggered after a user registers his own JMap Cloud NG extension.
+           * This event is triggered after a user registers his own JMap Server NG extension.
            *
            * The extension id is received as a param property of the event.
            *
@@ -2757,7 +2757,7 @@ declare namespace JMap {
          *
          * If the listener doesn't exist, does nothing.
          *
-         * Removes the listener from JMap Cloud NG. The listener is deleted and never called again after that.
+         * Removes the listener from JMap Server NG. The listener is deleted and never called again after that.
          *
          * @param listenerId The listener id
          * @example ```ts
@@ -2772,7 +2772,7 @@ declare namespace JMap {
       /**
        * ***JMap.Application.Event.UI***
        *
-       * Here you can manage all JMap Cloud NG high level event listeners.
+       * Here you can manage all JMap Server NG high level event listeners.
        *
        * Click to see all events available: ***{@link JMap.Application.Event.Main.on}***.
        */
@@ -2780,7 +2780,7 @@ declare namespace JMap {
         /**
          * ***JMap.Application.Event.UI.on***
          *
-         * Here you have all JMap Cloud NG high level available events on which you can attach a listener.
+         * Here you have all JMap Server NG high level available events on which you can attach a listener.
          */
         namespace on {
           /**
@@ -2869,7 +2869,7 @@ declare namespace JMap {
          *
          * If the listener doesn't exist, does nothing.
          *
-         * Removes the listener from JMap Cloud NG. The listener is deleted and never called again after that.
+         * Removes the listener from JMap Server NG. The listener is deleted and never called again after that.
          *
          * @param listenerId The listener id
          * @example ```ts
@@ -2884,7 +2884,7 @@ declare namespace JMap {
       /**
        * ***JMap.Application.Event.MapContext***
        *
-       * Here you can manage all JMap Cloud NG map context event listeners.
+       * Here you can manage all JMap Server NG map context event listeners.
        *
        * Click to see all events available: ***{@link JMap.Application.Event.MapContext.on}***.
        */
@@ -2892,7 +2892,7 @@ declare namespace JMap {
         /**
          * ***JMap.Application.Event.MapContext.on***
          *
-         * Here you have all JMap Cloud NG available map context events on which you can attach a listener.
+         * Here you have all JMap Server NG available map context events on which you can attach a listener.
          */
         namespace on {
           /**
@@ -2966,7 +2966,7 @@ declare namespace JMap {
          *
          * If the listener doesn't exist, does nothing.
          *
-         * Remove the listener from JMap Cloud NG Core library. The listener is deleted and never called again after that.
+         * Remove the listener from JMap Server NG Core library. The listener is deleted and never called again after that.
          *
          * @param listenerId The listener id
          * @example ```ts
@@ -2982,7 +2982,7 @@ declare namespace JMap {
     /**
      * **JMap.Application.User**
      *
-     * You can manage everything related to user in JMap Cloud NG here.
+     * You can manage everything related to user in JMap Server NG here.
      */
     namespace User {
       /**
@@ -2993,7 +2993,7 @@ declare namespace JMap {
        * An action must set the "href" OR the "onCLick" parameters, but not both.
        *
        * **Displaying the action's label in the UI**
-       * The action's label will be translated by JMap Cloud NG translation engine if a JTranslationItem is passed,
+       * The action's label will be translated by JMap Server NG translation engine if a JTranslationItem is passed,
        * otherwise the simple string will be used.
        * (see See {@link JMap.Language.translate} and {@link JMap.Language.addBundle} for more details on translations)
        *
@@ -3046,13 +3046,13 @@ declare namespace JMap {
     /**
      * **JMap.Application.Extension**
      *
-     * You can manage everything related to JMap Cloud NG extensions here.
+     * You can manage everything related to JMap Server NG extensions here.
      */
     namespace Extension {
       /**
        * ***JMap.Application.Extension.register***
        *
-       * Registers your own JMap Cloud NG extension.
+       * Registers your own JMap Server NG extension.
        *
        * @throws Error if a parameter is not correct
        * @param extensionModel The extension model
@@ -3062,7 +3062,7 @@ declare namespace JMap {
        *  id: "MyExtension", // Unique id
        *  initFn: () => {
        *    // here you can start your UI component if needed
-       *    console.log("JMap Cloud NG is started and my extension has been successfuly started")
+       *    console.log("JMap Server NG is started and my extension has been successfuly started")
        *  },
        *  onPanelCreation: panelContainerId => {
        *    console.info("Create your component here")
@@ -3081,9 +3081,9 @@ declare namespace JMap {
       /**
        * ***JMap.Application.Extension.isRegistered***
        *
-       * Tells if an JMap Cloud NG extension has been registered or not.
+       * Tells if an JMap Server NG extension has been registered or not.
        *
-       * It can be usefull to know if a JMap Cloud NG extension is in use or not.
+       * It can be usefull to know if a JMap Server NG extension is in use or not.
        *
        * @throws Error if extensionId format is not correct
        * @param extensionId The extension id
@@ -3098,9 +3098,9 @@ declare namespace JMap {
       /**
        * ***JMap.Application.Extension.getAllRegisteredIds***
        *
-       * Returns all JMap Cloud NG registered extension ids.
+       * Returns all JMap Server NG registered extension ids.
        *
-       * Desn't list JMap Cloud NG Core extensions, only JMap Cloud NG extensions.
+       * Desn't list JMap Server NG Core extensions, only JMap Server NG extensions.
        *
        * @example ```ts
        *

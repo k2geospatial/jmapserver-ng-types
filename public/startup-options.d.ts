@@ -1,6 +1,6 @@
 declare interface JCoreOptions {
   /**
-   * This section is about the JMap Cloud NG startup options.
+   * This section is about the JMap Server NG startup options.
    * 
    * An example of how to configure the application startup options :
    * @example ```html
@@ -22,8 +22,8 @@ declare interface JCoreOptions {
    *      }
    *    </script>
    *    ...
-   *    <script defer type="text/javascript" src="https://cdn.jsdelivr.net/npm/jmapcloud-ng-core@0.5.0/public/index.js"></script>
-   *    <script defer type="text/javascript" src="https://cdn.jsdelivr.net/npm/jmapcloud-ng@0.1.1/public/index.js"></script>
+   *    <script defer type="text/javascript" src="https://cdn.jsdelivr.net/npm/jmapserver-ng-core@0.5.0/public/index.js"></script>
+   *    <script defer type="text/javascript" src="https://cdn.jsdelivr.net/npm/jmapserver-ng@0.1.1/public/index.js"></script>
    *   </body>
    * </html>
    * 
@@ -38,7 +38,7 @@ declare interface JApplicationOptions {
    * 
    * All application dom elements will be inserted inside this div.
    * 
-   * By default the div container id is "***jmapcloud-ng***", but you can set the id of your choice like that :
+   * By default the div container id is "***jmapserver-ng***", but you can set the id of your choice like that :
    * ```html
    * <html>
    *   ...
@@ -59,7 +59,7 @@ declare interface JApplicationOptions {
    *
    * In the above example the application will be inserted in the div having "my-custom-container-id" as id. You need to set the width and the height of this div by yourself.
    * 
-   * If no container is found in the DOM with the specified id, JMap Cloud NG will create and append it automatically in the body element of the web page.
+   * If no container is found in the DOM with the specified id, JMap Server NG will create and append it automatically in the body element of the web page.
    */
   containerId?: string
 
@@ -187,7 +187,7 @@ declare interface JApplicationOptions {
   /**
    * The application have multiple panels available by default : "layer", "selection", "measure", "mapcontext", "print", "user", "query", "annotation".
    * 
-   * But you can tell JMap Cloud NG to disabled some panels. If a panel is disabled it will disappear on the left menu.
+   * But you can tell JMap Server NG to disabled some panels. If a panel is disabled it will disappear on the left menu.
    * 
    * The ***disabledPanels*** parameter is an array with the panel ids you want to be disabled.
    * 
@@ -214,7 +214,7 @@ declare interface JApplicationOptions {
   /**
    * Controls the side panel default visibility state.
    * 
-   * The JMap Cloud NG side panel is open by default when the application starts, but you can change this behaviour by using this option.
+   * The JMap Server NG side panel is open by default when the application starts, but you can change this behaviour by using this option.
    *  
    * ```html
    * <html>
@@ -296,7 +296,7 @@ declare interface JApplicationOptions {
    * 
    * This mechanism offer a way to add your own panel, map interactor, redux store data, etc ...
    * 
-   * You can fully customize JMap Cloud NG with your own code, written with your favourite dev tools.
+   * You can fully customize JMap Server NG with your own code, written with your favourite dev tools.
    */
   extensions?: JAppExtension[]
 }
