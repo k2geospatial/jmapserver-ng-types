@@ -23,7 +23,7 @@
   "homepage": "https://github.com/k2geospatial/jmapserver-ng-types#readme",
   "devDependencies": {
     "@types/react": "18.2.21",
-    "jmapserver-ng-core-types": "1.16.0",
+    "jmapserver-ng-core-types": "1.16.1",
     "maplibre-gl": "^3.2.1",
     "react": "^18.2.0",
     "typedoc": "^0.24.8"
