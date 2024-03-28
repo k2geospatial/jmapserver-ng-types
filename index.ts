@@ -75,6 +75,8 @@ export interface JAppMeasureState {
   isSelectionActive: boolean
   isNewElement: boolean
   draw: JAppDrawState
+  snapLayer: string | undefined
+  isSnapActive: boolean
 }
 
 export interface JAppDrawState {
@@ -339,7 +341,7 @@ export interface JAppPrintService {
   setFileType(fileType: JAPP_PRINT_FILE_TYPES): void
   getFileType(): JAPP_PRINT_FILE_TYPES
   setHiResolution(isHiResolution: boolean): void
-  getHiResolution():boolean
+  getHiResolution(): boolean
   takeCapture(): void
 }
 
