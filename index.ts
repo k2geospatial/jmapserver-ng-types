@@ -25,6 +25,7 @@ export interface JAppGeometryState {
   isUpdate: boolean
   wizardStep: JAPP_GEOMETRY_WIZARD_STEPS
   draw: JAppDrawState
+  snap: JAppSnap
 }
 
 export interface JAppFeatureState {
@@ -75,8 +76,7 @@ export interface JAppMeasureState {
   isSelectionActive: boolean
   isNewElement: boolean
   draw: JAppDrawState
-  snapLayer: string | undefined
-  isSnapActive: boolean
+  snap: JAppSnap
 }
 
 export interface JAppDrawState {
@@ -93,6 +93,12 @@ export interface JAppAnnotationState {
   annotations: JAppAnnotation[]
   draw: JAppDrawState
   presetColors: string[]
+  snap: JAppSnap
+}
+
+export interface JAppSnap {
+  layer: JId | undefined
+  isEnabled: boolean
 }
 
 export interface JAppPrintState {
