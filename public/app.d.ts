@@ -365,6 +365,32 @@ declare namespace JMap {
        * ```
        */
       function getPresetColors(): string[]
+
+      /**
+       * **JMap.Application.Annotation.setSnapEnabled**
+       *
+       * Enables or disables snap mode.
+       *
+       * @example ```ts
+       *
+       * // enable snap mode
+       * JMap.Application.Annotation.setSnapEnabled(true)
+       * ```
+       */
+      function setSnapEnabled(isEnabled: boolean): void
+
+      /**
+       * **JMap.Application.Annotation.setSnapLayerId**
+       *
+       * set the layer id to snap on.
+       *
+       * @example ```ts
+       *
+       * // snap will target the features of the layer having id=1
+       * JMap.Application.Annotation.setSnapLayerId(1)
+       * ```
+       */
+      function setSnapLayerId(layerId: JId): void
     }
     /**
      * **JMap.Application.Panel**
@@ -676,6 +702,32 @@ declare namespace JMap {
        * ```
        */
       function closePanel(): void
+
+      /**
+       * **JMap.Application.Geometry.setSnapEnabled**
+       *
+       * Enables or disables snap mode.
+       *
+       * @example ```ts
+       *
+       * // enable snap mode
+       * JMap.Application.Geometry.setSnapEnabled(true)
+       * ```
+       */
+      function setSnapEnabled(isEnabled: boolean): void
+
+      /**
+       * **JMap.Application.Geometry.setSnapLayerId**
+       *
+       * set the layer id to snap on.
+       *
+       * @example ```ts
+       *
+       * // snap will target the features of the layer having id=1
+       * JMap.Application.Geometry.setSnapLayerId(1)
+       * ```
+       */
+      function setSnapLayerId(layerId: JId): void
     }
 
     /**
@@ -939,9 +991,9 @@ declare namespace JMap {
 
       /**
        * **JMap.Application.Measure.getMeasurementSystem**
-       * 
+       *
        * Returns the current measurement system used by the Measurements Panel
-       * 
+       *
        * @example ```ts
        *
        * // get the current measurement system
@@ -949,29 +1001,55 @@ declare namespace JMap {
        * // "geodetic"
        * ```
        */
-      function getMeasurementSystem(): JAPP_MEASUREMENT_SYSTEMS    
+      function getMeasurementSystem(): JAPP_MEASUREMENT_SYSTEMS
 
       /**
        * **JMap.Application.Measure.setMeasurementSystem**
-       * 
+       *
        * Sets the measurement system used by the Measurements Panel. **This setting is only taken into account when you draw measurements using the Measurements Panel. It does not affect jmapserver-ng-core methods like {@link JMap.Geometry.getDistance}, which always return geodetic values.**
-       * 
-       * **This method should not be called in regular situations.** 
-       * 
+       *
+       * **This method should not be called in regular situations.**
+       *
        * Default measurement system is "geodetic", meaning that all measurements are representative of the length or area of features on the surface of the Earth. This is what is normally desired.
-       * 
-       * In some rare situations, someone may want to get the length or area of measurements in the map's projection plane (EPSG:3857 - WGS 84 / Pseudo-Mercator). In this case, they can set the measurement system to "planar". 
-       * 
+       *
+       * In some rare situations, someone may want to get the length or area of measurements in the map's projection plane (EPSG:3857 - WGS 84 / Pseudo-Mercator). In this case, they can set the measurement system to "planar".
+       *
        * Be warned that lengths or areas in planar context are not representative of the real dimensions on the earth's surface. The only supported planar projection for measurements is EPSG:3857.
-       * 
-       * @param measurementSystem "geodetic" (default) or "planar" 
+       *
+       * @param measurementSystem "geodetic" (default) or "planar"
        * @example ```ts
        *
        * // set the current measurement system to "geodetic"
        * JMap.Application.Measure.setMeasurementSystem("geodetic")
        * ```
        */
-      function setMeasurementSystem(measurementSystem: JAPP_MEASUREMENT_SYSTEMS): void      
+      function setMeasurementSystem(measurementSystem: JAPP_MEASUREMENT_SYSTEMS): void
+
+      /**
+       * **JMap.Application.Measure.setSnapEnabled**
+       *
+       * Enables or disables snap mode.
+       *
+       * @example ```ts
+       *
+       * // enable snap mode
+       * JMap.Application.Measure.setSnapEnabled(true)
+       * ```
+       */
+      function setSnapEnabled(isEnabled: boolean): void
+
+      /**
+       * **JMap.Application.Measure.setSnapLayerId**
+       *
+       * set the layer id to snap on.
+       *
+       * @example ```ts
+       *
+       * // snap will target the features of the layer having id=1
+       * JMap.Application.Measure.setSnapLayerId(1)
+       * ```
+       */
+      function setSnapLayerId(layerId: JId): void
     }
 
     /**
@@ -2297,7 +2375,7 @@ declare namespace JMap {
        * ```
        */
       function setHiResolution(isHiResolution: boolean): void
-    
+
       /**
        * **JMap.Application.Print.getHiResolution**
        *
@@ -2310,8 +2388,8 @@ declare namespace JMap {
        * // true
        * ```
        */
-      function getHiResolution():boolean
-    
+      function getHiResolution(): boolean
+
       /**
        * **JMap.Application.Print.takeCapture**
        *
