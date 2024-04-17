@@ -367,17 +367,17 @@ declare namespace JMap {
       function getPresetColors(): string[]
 
       /**
-       * **JMap.Application.Annotation.setSnapEnabled**
+       * **JMap.Application.Annotation.setSnapIsEnabled**
        *
        * Enables or disables snap mode.
        *
        * @example ```ts
        *
        * // enable snap mode
-       * JMap.Application.Annotation.setSnapEnabled(true)
+       * JMap.Application.Annotation.setSnapIsEnabled(true)
        * ```
        */
-      function setSnapEnabled(isEnabled: boolean): void
+      function setSnapIsEnabled(isEnabled: boolean): void
 
       /**
        * **JMap.Application.Annotation.setSnapLayerId**
@@ -704,17 +704,17 @@ declare namespace JMap {
       function closePanel(): void
 
       /**
-       * **JMap.Application.Geometry.setSnapEnabled**
+       * **JMap.Application.Geometry.setSnapIsEnabled**
        *
        * Enables or disables snap mode.
        *
        * @example ```ts
        *
        * // enable snap mode
-       * JMap.Application.Geometry.setSnapEnabled(true)
+       * JMap.Application.Geometry.setSnapIsEnabled(true)
        * ```
        */
-      function setSnapEnabled(isEnabled: boolean): void
+      function setSnapIsEnabled(isEnabled: boolean): void
 
       /**
        * **JMap.Application.Geometry.setSnapLayerId**
@@ -1026,17 +1026,17 @@ declare namespace JMap {
       function setMeasurementSystem(measurementSystem: JAPP_MEASUREMENT_SYSTEMS): void
 
       /**
-       * **JMap.Application.Measure.setSnapEnabled**
+       * **JMap.Application.Measure.setSnapIsEnabled**
        *
        * Enables or disables snap mode.
        *
        * @example ```ts
        *
        * // enable snap mode
-       * JMap.Application.Measure.setSnapEnabled(true)
+       * JMap.Application.Measure.setSnapIsEnabled(true)
        * ```
        */
-      function setSnapEnabled(isEnabled: boolean): void
+      function setSnapIsEnabled(isEnabled: boolean): void
 
       /**
        * **JMap.Application.Measure.setSnapLayerId**
