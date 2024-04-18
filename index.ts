@@ -168,7 +168,7 @@ export interface JAppGeometryService {
   finishCreate(): void
   finishUpdate(): Promise<void>
   closePanel(): void
-  setSnapIsEnabled(isEnabled: boolean): void
+  setSnapEnabled(isEnabled: boolean): void
   setSnapLayerId(LayerId: JId): void
 }
 
@@ -200,7 +200,7 @@ export interface JAppAnnotationService {
   setDrawMode(drawMode: JAPP_DRAW_MODES): void
   getDrawType(): JAPP_DRAW_TYPES
   setDrawType(drawType: JAPP_DRAW_TYPES): void
-  setSnapIsEnabled(isEnabled: boolean): void
+  setSnapEnabled(isEnabled: boolean): void
   setSnapLayerId(LayerId: JId): void
   existsById(annotationId: string): boolean
   getById(annotationId: string): JAppAnnotation
@@ -317,7 +317,7 @@ export interface JAppMeasureService {
   deleteAllCircles(): number
   setMeasurementSystem(measurementSystem: JAPP_MEASUREMENT_SYSTEMS): void
   getMeasurementSystem(): JAPP_MEASUREMENT_SYSTEMS
-  setSnapIsEnabled(isEnabled: boolean): void
+  setSnapEnabled(isEnabled: boolean): void
   setSnapLayerId(LayerId: JId): void
 }
 
