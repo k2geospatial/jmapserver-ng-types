@@ -25,6 +25,8 @@ export interface JAppGeometryState {
   isUpdate: boolean
   wizardStep: JAPP_GEOMETRY_WIZARD_STEPS
   draw: JAppDrawState
+  lastSnap: JAppSnap
+  snap: JAppSnap
 }
 
 export interface JAppFeatureState {
@@ -75,6 +77,8 @@ export interface JAppMeasureState {
   isSelectionActive: boolean
   isNewElement: boolean
   draw: JAppDrawState
+  lastSnap: JAppSnap
+  snap: JAppSnap
 }
 
 export interface JAppDrawState {
@@ -91,6 +95,13 @@ export interface JAppAnnotationState {
   annotations: JAppAnnotation[]
   draw: JAppDrawState
   presetColors: string[]
+  lastSnap: JAppSnap
+  snap: JAppSnap
+}
+
+export interface JAppSnap {
+  layerId: JId | undefined
+  isEnabled: boolean
 }
 
 export interface JAppPrintState {
@@ -157,6 +168,8 @@ export interface JAppGeometryService {
   finishCreate(): void
   finishUpdate(): Promise<void>
   closePanel(): void
+  setSnapEnabled(isEnabled: boolean): void
+  setSnapLayerId(LayerId: JId): void
 }
 
 export interface JAppFeatureService {
@@ -187,6 +200,8 @@ export interface JAppAnnotationService {
   setDrawMode(drawMode: JAPP_DRAW_MODES): void
   getDrawType(): JAPP_DRAW_TYPES
   setDrawType(drawType: JAPP_DRAW_TYPES): void
+  setSnapEnabled(isEnabled: boolean): void
+  setSnapLayerId(LayerId: JId): void
   existsById(annotationId: string): boolean
   getById(annotationId: string): JAppAnnotation
   getAll(): JAppAnnotation[]
@@ -302,6 +317,8 @@ export interface JAppMeasureService {
   deleteAllCircles(): number
   setMeasurementSystem(measurementSystem: JAPP_MEASUREMENT_SYSTEMS): void
   getMeasurementSystem(): JAPP_MEASUREMENT_SYSTEMS
+  setSnapEnabled(isEnabled: boolean): void
+  setSnapLayerId(LayerId: JId): void
 }
 
 export interface JAppExtensionService {
@@ -339,7 +356,7 @@ export interface JAppPrintService {
   setFileType(fileType: JAPP_PRINT_FILE_TYPES): void
   getFileType(): JAPP_PRINT_FILE_TYPES
   setHiResolution(isHiResolution: boolean): void
-  getHiResolution():boolean
+  getHiResolution(): boolean
   takeCapture(): void
 }
 
