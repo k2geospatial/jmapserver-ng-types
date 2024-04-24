@@ -69,6 +69,7 @@ export interface JAppUiState {
 
 export interface JAppFormState {
   expandedSections: { [id: string]: boolean }
+  isRemoteSubmitting: boolean
 }
 
 export interface JAppMeasureState {
@@ -274,6 +275,7 @@ export interface JApplicationUIService {
 
 export interface JAppEventService {
   Main: JAppAppEventModule
+  Form: JAppFormEventModule
   Layer: JAppLayerEventModule
   UI: JAppUIEventModule
   Extension: JAppExtensionEventModule
@@ -419,6 +421,12 @@ export interface JAppFormService {
 export interface JAppAppEventModule extends JEventModule {
   on: {
     appReady(listenerId: string, fn: () => void): void
+  }
+}
+
+export interface JAppFormEventModule extends JEventModule {
+  on: {
+    autoSubmit(listenerId: string, fn: () => void): void
   }
 }
 
