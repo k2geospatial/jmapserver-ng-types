@@ -2676,6 +2676,96 @@ declare namespace JMap {
       }
 
       /**
+       * ***JMap.Application.Event.Form***
+       *
+       * Here you can manage all JMap Server NG form event listeners.
+       *
+       * Click to see all events available: ***{@link JMap.Application.Event.Form}***.
+       */
+      namespace Form {
+        /**
+         * ***JMap.Application.Event.Form.on***
+         *
+         * Here you have all JMap Server NG form available events on which you can attach a listener.
+         */
+        namespace on {
+          /**
+           * ***JMap.Application.Event.Form.on.autoSubmit***
+           *
+           * This event is dispatched to trigger an automatic submission of the currently displayed form. For internal use only.
+           *
+           * @param listenerId Your listener id (must be unique)
+           * @param fn Your listener function
+           * @example ```ts
+           *
+           * // log a message in the console once the application is loaded
+           * JMap.Application.Event.Form.on.autoSubmit(
+           *   "custom-auto-submit",
+           *   () => {
+           *       console.log(`Auto form submit has been requested`)
+           *   }
+           * )
+           * ```
+           */
+          function autoSubmit(listenerId: string, fn: () => void): void
+        }
+
+        /**
+         * ***JMap.Application.Event.Form.activate***
+         *
+         * Activates the listener.
+         *
+         * If the listener is already active, does nothing.
+         *
+         * If the listener is inactive, it will be reactivated and will be called again ...
+         *
+         * @param listenerId The listener id
+         * @example ```ts
+         *
+         * // activate the listener "my-form-listener"
+         * JMap.Application.Event.Form.activate("my-form-listener")
+         * ```
+         */
+        function activate(listenerId: string): void
+
+        /**
+         * ***JMap.Application.Event.Form.deactivate***
+         *
+         * Deactivates the listener.
+         *
+         * If the listener id doesn't exist or if the listener is already inactive, does nothing.
+         *
+         * If the listener is active, it will be deactivated and will be ignored ...
+         *
+         * @param listenerId The listener id
+         * @example ```ts
+         *
+         * // deactivate the listener "my-form-listener"
+         * JMap.Application.Event.Form.deactivate("my-form-listener")
+         * ```
+         */
+        function deactivate(listenerId: string): void
+
+        /**
+         * ***JMap.Application.Event.Form.remove***
+         *
+         * Removes the listener.
+         *
+         * If the listener doesn't exist, does nothing.
+         *
+         * Removes the listener from JMap Server NG. The listener is deleted and never called again after that.
+         *
+         * @param listenerId The listener id
+         * @example ```ts
+         *
+         * // remove the listener "my-form-listener"
+         * JMap.Application.Event.Form.remove("my-form-listener")
+         * ```
+         */
+        function remove(listenerId: string): void
+      }
+
+      /**
        * ***JMap.Application.Event.Layer***
        *
        * Here you can manage all JMap Server NG layer event listeners.
