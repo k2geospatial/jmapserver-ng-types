@@ -16,8 +16,8 @@ declare namespace JMap {
      *
      * Returns the application build version.
      *
-     * @example ```ts
-     *
+     * @example
+     * ```ts
      * // return the build version, for example "1.0.1"
      * JMap.Application.getVersion()
      * ```
@@ -31,8 +31,8 @@ declare namespace JMap {
      *
      * For the same API version, multiple implementation versions can exist.
      *
-     * @example ```ts
-     *
+     * @example
+     * ```ts
      * // return the build version, for example "1.0.1"
      * JMap.Application.getApiVersion()
      * ```
@@ -44,8 +44,8 @@ declare namespace JMap {
      *
      * Opens JMap Server NG's online JS API documentation, in a new tab.
      *
-     * @example ```ts
-     *
+     * @example
+     * ```ts
      * // open JMap Server NG's online documentation, in a new tab
      * JMap.Application.openDocumentation()
      * ```
@@ -57,8 +57,8 @@ declare namespace JMap {
      *
      * Opens JMap Server NG's online user manual, in a new tab.
      *
-     * @example ```ts
-     *
+     * @example
+     * ```ts
      * // Open JMap Server NG's online user manual, in a new tab
      * JMap.Application.openUserManual()
      * ```
@@ -76,8 +76,8 @@ declare namespace JMap {
        *
        * Returns the current draw mode.
        *
-       * @example ```ts
-       *
+       * @example
+       * ```ts
        * // return the current draw mode
        * JMap.Application.Annotation.getDrawMode()
        * ```
@@ -90,8 +90,8 @@ declare namespace JMap {
        * Sets the annotation draw mode.
        *
        * @param drawMode the new draw mode
-       * @example ```ts
-       *
+       * @example
+       * ```ts
        * // Set the annotation draw mode to "draw"
        * JMap.Application.Annotation.setDrawMode("draw")
        * ```
@@ -103,8 +103,8 @@ declare namespace JMap {
        *
        * Returns the current draw type.
        *
-       * @example ```ts
-       *
+       * @example
+       * ```ts
        * // return the current draw type
        * JMap.Application.Annotation.getDrawType()
        * ```
@@ -117,8 +117,8 @@ declare namespace JMap {
        * Sets the annotation draw mode.
        *
        * @param drawType the new draw type
-       * @example ```ts
-       *
+       * @example
+       * ```ts
        * // Set the annotation draw mode to "draw"
        * JMap.Application.Annotation.setDrawMode("draw")
        * ```
@@ -132,8 +132,8 @@ declare namespace JMap {
        *
        * @throws if the annotationId param is not a valid string
        * @param annotationId the given annotation id
-       * @example ```ts
-       *
+       * @example
+       * ```ts
        * // return true if annotation exists, else false
        * JMap.Application.Annotation.existsById("d68385b01be3c241c7b6298b2788839d")
        * ```
@@ -147,8 +147,8 @@ declare namespace JMap {
        *
        * @throws if the annotationId param is not a valid string, or annotation is not found
        * @param annotationId the given annotation id
-       * @example ```ts
-       *
+       * @example
+       * ```ts
        * // return the annotation for the given id
        * JMap.Application.Annotation.getById("d68385b01be3c241c7b6298b2788839d")
        * ```
@@ -160,8 +160,8 @@ declare namespace JMap {
        *
        * Returns all annotations.
        *
-       * @example ```ts
-       *
+       * @example
+       * ```ts
        * // return all annotations
        * JMap.Application.Annotation.getAll()
        * ```
@@ -175,8 +175,8 @@ declare namespace JMap {
        *
        * Empty array if no annotation is selected
        *
-       * @example ```ts
-       *
+       * @example
+       * ```ts
        * // return ids of selected annotations
        * JMap.Application.Annotation.getSelectedIds()
        * ```
@@ -190,8 +190,8 @@ declare namespace JMap {
        *
        * Does nothing if no annotation exists.
        *
-       * @example ```ts
-       *
+       * @example
+       * ```ts
        * // Delete all annotations
        * JMap.Application.Annotation.deleteAll()
        * ```
@@ -207,8 +207,8 @@ declare namespace JMap {
        *
        * @param annotationType the annotation type : "point", "polygon", "line_string", "rectangle", "circle", or "text"
        * @throws if the annotation type is not correct
-       * @example ```ts
-       *
+       * @example
+       * ```ts
        * // Delete all text annotations if exist
        * JMap.Application.Annotation.deleteByType("text")
        * ```
@@ -222,8 +222,8 @@ declare namespace JMap {
        *
        * @param annotationIds an array of annotation id
        * @throws if an annotation array is empty or an annotation is not found for the given ids.
-       * @example ```ts
-       *
+       * @example
+       * ```ts
        * // Delete two annotations
        * JMap.Application.Annotation.deleteByIds([
        *  "d68385b01be3c241c7b6298b2788839d",
@@ -240,8 +240,8 @@ declare namespace JMap {
        *
        * Does nothing if no selection.
        *
-       * @example ```ts
-       *
+       * @example
+       * ```ts
        * // Delete selected annotations
        * JMap.Application.Annotation.deleteSelected()
        * ```
@@ -253,8 +253,8 @@ declare namespace JMap {
        *
        * Returns the current style in use for annotation drawing.
        *
-       * @example ```ts
-       *
+       * @example
+       * ```ts
        * // return the current style in use for annotation drawing
        * JMap.Application.Annotation.getStyle()
        * ```
@@ -268,8 +268,8 @@ declare namespace JMap {
        *
        * Merges the new options with current one.
        *
-       * @example ```ts
-       *
+       * @example
+       * ```ts
        * // Set the line width as 3px
        * JMap.Application.Annotation.updateStyle({
        *  lineWidth: 3
@@ -283,8 +283,8 @@ declare namespace JMap {
        *
        * For given ids, updates annotation style.
        *
-       * @example ```ts
-       *
+       * @example
+       * ```ts
        * const annotationIds = [
        *  "d68385b01be3c241c7b6298b2788839d",
        *  "98ef8ad4476f0e6fa26be416d58d0734"
@@ -306,8 +306,8 @@ declare namespace JMap {
        * Set the preset colors of color pickers using the given colors.
        * @param presetColors A array of preset hex colors
        * @throws if presetColors not an array, does not contain string or is too big
-       * @example ```ts
-       *
+       * @example
+       * ```ts
        * // Set the preset colors with 2 color
        * const presetColors = [
        *  "#29D1EA",
@@ -326,8 +326,8 @@ declare namespace JMap {
        *
        * @param presetColor A hex color
        * @throws if presetColor not an string or is empty
-       * @example ```ts
-       *
+       * @example
+       * ```ts
        * // Add the color #D2FDDF to the preset colors
        * const presetColor = "#D2FDDF"
        *
@@ -343,8 +343,8 @@ declare namespace JMap {
        *
        * @param presetColor A hex color
        * @throws if presetColor not an string or is empty
-       * @example ```ts
-       *
+       * @example
+       * ```ts
        * // Delete the color #D2FDDF from the preset colors
        * const presetColor = "#D2FDDF"
        *
@@ -358,8 +358,8 @@ declare namespace JMap {
        *
        * Return the preset colors used by the application's color pickers.
        *
-       * @example ```ts
-       *
+       * @example
+       * ```ts
        * // Get the current preset colors
        * JMap.Application.Annotation.getPresetColors()
        * ```
@@ -373,8 +373,8 @@ declare namespace JMap {
        *
        * @param isEnabled true to enable snap mode, false to disable
        * @throws if isEnabled is not a boolean
-       * @example ```ts
-       *
+       * @example
+       * ```ts
        * // enable snap mode
        * JMap.Application.Annotation.setSnapEnabled(true)
        * ```
@@ -388,8 +388,8 @@ declare namespace JMap {
        *
        * @param layerId the JMap layer id
        * @throws if layer not found
-       * @example ```ts
-       *
+       * @example
+       * ```ts
        * // snap will target the features of the layer having id=1
        * JMap.Application.Annotation.setSnapLayerId(1)
        * ```
@@ -409,8 +409,8 @@ declare namespace JMap {
        *
        * Returns the active panel.
        *
-       * @example ```ts
-       *
+       * @example
+       * ```ts
        * // return the currently active panel
        * JMap.Application.Panel.getActive()
        * ```
@@ -422,8 +422,8 @@ declare namespace JMap {
        *
        * Returns all application panels available.
        *
-       * @example ```ts
-       *
+       * @example
+       * ```ts
        * // return all available application panels
        * JMap.Application.Panel.getAll()
        * ```
@@ -436,8 +436,8 @@ declare namespace JMap {
        * Returns true if the panel exists for a given panel id.
        *
        * @param panelId The panel id to test
-       * @example ```ts
-       *
+       * @example
+       * ```ts
        * // return true if panel id="layer" exists
        * JMap.Application.Panel.existById("custom-panel")
        * ```
@@ -455,8 +455,8 @@ declare namespace JMap {
        * @throws if panel is not found
        * @param panelId The new application panel to activate
        * @param params optionnal parameters
-       * @example ```ts
-       *
+       * @example
+       * ```ts
        * // will activate and display the panel id="layer"
        * JMap.Application.Panel.activateById("layer")
        * ```
@@ -469,8 +469,8 @@ declare namespace JMap {
        * Deactivates the current panel, except if the current panel is the layer panel, or if there is only one panel available.
        *
        * @param params optionnal parameters
-       * @example ```ts
-       *
+       * @example
+       * ```ts
        * // will activate the current panel
        * JMap.Application.Panel.deactivateCurrent()
        * ```
@@ -484,8 +484,8 @@ declare namespace JMap {
        *
        * @throws if panel format is not correct
        * @param panel an object that is the definition of the new panel
-       * @example ```ts
-       *
+       * @example
+       * ```ts
        * const customPanelId = "custom-panel"
        * // will add the new panel, here an empty panel just for the example
        * JMap.Application.Panel.add({
@@ -511,8 +511,8 @@ declare namespace JMap {
        *
        * @throws if panel is not found or if this is the last panel
        * @param panelId The application panel id to remove
-       * @example ```ts
-       *
+       * @example
+       * ```ts
        * // will remove the "custom-panel" panel
        * JMap.Application.Panel.removeById("custom-panel")
        * ```
@@ -533,8 +533,8 @@ declare namespace JMap {
        *
        * @param layerId the JMap layer id
        * @param featureId the feature id
-       * @example ```ts
-       *
+       * @example
+       * ```ts
        * // open edit menu (single feature) for layer id=5, and feature id=234
        * JMap.Application.Feature.openEditMenuById(5, 234)
        * ```
@@ -548,8 +548,8 @@ declare namespace JMap {
        *
        * @param layerId the JMap layer id
        * @param featureIds an array of features ids
-       * @example ```ts
-       *
+       * @example
+       * ```ts
        * // open edit menu (multiple edition) for layer id=5, and features id=234, 452 and 176
        * JMap.Application.Feature.openEditMenuByIds(5, [234, 452, 176])
        * ```
@@ -563,10 +563,8 @@ declare namespace JMap {
        *
        * If not visible, does nothing.
        *
-       * @param layerId the JMap layer id
-       * @param featureIds an array of features ids
-       * @example ```ts
-       *
+       * @example
+       * ```ts
        * // close the edit menu if visible
        * JMap.Application.Feature.closeEditMenu()
        * ```
@@ -580,8 +578,8 @@ declare namespace JMap {
        *
        * @param layerId the JMap layer id
        * @param featureIds an array of features ids
-       * @example ```ts
-       *
+       * @example
+       * ```ts
        * // delete 2 features on layer id=4
        * JMap.Application.Feature.deleteByIds(4, [23, 76]).then(result => console.log("Delete result", result))
        * ```
@@ -601,8 +599,8 @@ declare namespace JMap {
        * Opens the geometry panel in order to create a new feature.
        *
        * @throws if no layer is editable
-       * @example ```ts
-       *
+       * @example
+       * ```ts
        * // will open the geometry panel
        * JMap.Application.Geometry.openPanelForCreation()
        * ```
@@ -615,9 +613,9 @@ declare namespace JMap {
        * Opens the geometry panel in order to update a feature geometry.
        *
        * @throws if the given layer or feature are not editable
-       * @param JAppGeometryUpdateParams function parameters
-       * @example ```ts
-       *
+       * @param params function parameters
+       * @example
+       * ```ts
        * // will open the geometry panel in order to update the feature geometry
        * JMap.Application.Geometry.openPanelForUpdate()
        * ```
@@ -631,8 +629,8 @@ declare namespace JMap {
        *
        * @throws if layer not found
        * @param layerId The JMap layer id
-       * @example ```ts
-       *
+       * @example
+       * ```ts
        * // will select the layer id=3
        * JMap.Application.Geometry.selectLayer(3)
        * ```
@@ -645,8 +643,8 @@ declare namespace JMap {
        * Enables drawing of the geometry on the map.
        *
        * @throws if no layer is selected
-       * @example ```ts
-       *
+       * @example
+       * ```ts
        * // enable drawing of the geometry on the map
        * JMap.Application.Geometry.startCreationDrawing()
        * ```
@@ -658,8 +656,8 @@ declare namespace JMap {
        *
        * Stops the geometry creation, when drawing on the map, and displays the layer selection panel.
        *
-       * @example ```ts
-       *
+       * @example
+       * ```ts
        * // stop drawing the geometry on the map
        * JMap.Application.Geometry.stopCreationDrawing()
        * ```
@@ -672,8 +670,8 @@ declare namespace JMap {
        * Finishes geometry creation.
        *
        * @throws if panel is not in creation mode, or if geometry has not yet been created.
-       * @example ```ts
-       *
+       * @example
+       * ```ts
        * // finishe creating or updating the geometry
        * JMap.Application.Geometry.finishCreate()
        * ```
@@ -686,8 +684,8 @@ declare namespace JMap {
        * Finishes geometry update.
        *
        * @throws if panel is not in update mode
-       * @example ```ts
-       *
+       * @example
+       * ```ts
        * // finishe updating the geometry
        * JMap.Application.Geometry.finishUpdate()
        * ```
@@ -699,8 +697,8 @@ declare namespace JMap {
        *
        * Closes the geometry creation or update panel without confirmation message.
        *
-       * @example ```ts
-       *
+       * @example
+       * ```ts
        * // close the geometry panel
        * JMap.Application.Geometry.closePanel()
        * ```
@@ -714,8 +712,8 @@ declare namespace JMap {
        *
        * @param isEnabled true to enable snap mode, false to disable
        * @throws if isEnabled is not a boolean
-       * @example ```ts
-       *
+       * @example
+       * ```ts
        * // enable snap mode
        * JMap.Application.Geometry.setSnapEnabled(true)
        * ```
@@ -729,8 +727,8 @@ declare namespace JMap {
        *
        * @param layerId the JMap layer id
        * @throws if layer not found
-       * @example ```ts
-       *
+       * @example
+       * ```ts
        * // snap will target the features of the layer having id=1
        * JMap.Application.Geometry.setSnapLayerId(1)
        * ```
@@ -749,8 +747,8 @@ declare namespace JMap {
        *
        * Returns all measures.
        *
-       * @example ```ts
-       *
+       * @example
+       * ```ts
        * // return currently drawn measures
        * JMap.Application.Measure.getAll()
        * ```
@@ -763,8 +761,8 @@ declare namespace JMap {
        * Returns true if a measure exists for the given id, else false.
        *
        * @throws Error if measureId is not a string or an empty string
-       * @example ```ts
-       *
+       * @example
+       * ```ts
        * // return true if the measure exists, else false
        * JMap.Application.Measure.existsById("ac57b1bd83ca6d8e0013e4cf9f06847e")
        *
@@ -783,8 +781,8 @@ declare namespace JMap {
        * Returns the measure for the given id.
        *
        * @throws Error if measureId is not a string or an empty string, or if measure is not found
-       * @example ```ts
-       *
+       * @example
+       * ```ts
        * // return the measure for the given id
        * JMap.Application.Measure.getById("ac57b1bd83ca6d8e0013e4cf9f06847e")
        *
@@ -802,8 +800,8 @@ declare namespace JMap {
        *
        * Returns all "line" measures. Result contains no polygon or circle measures.
        *
-       * @example ```ts
-       *
+       * @example
+       * ```ts
        * // return all line measures
        * JMap.Application.Measure.getAllLineMeasures()
        * ```
@@ -815,8 +813,8 @@ declare namespace JMap {
        *
        * Returns all "polygon" measures. Result contains no line or circle measures.
        *
-       * @example ```ts
-       *
+       * @example
+       * ```ts
        * // return all polygon measures
        * JMap.Application.Measure.getAllPolygonMeasures()
        * ```
@@ -828,8 +826,8 @@ declare namespace JMap {
        *
        * Returns all "circle" measures. Result contains no line or polygon measures.
        *
-       * @example ```ts
-       *
+       * @example
+       * ```ts
        * // return all circle measures
        * JMap.Application.Measure.getAllCircleMeasures()
        * ```
@@ -841,8 +839,8 @@ declare namespace JMap {
        *
        * Resets measures with provided measures.
        *
-       * @example ```ts
-       *
+       * @example
+       * ```ts
        * // remove all measures
        * JMap.Application.Measure.setAllMeasures([])
        * ```
@@ -854,8 +852,8 @@ declare namespace JMap {
        *
        * Activates a measure type for the drawing measurement tool.
        * @param measureType The new measure type to apply
-       * @example ```ts
-       *
+       * @example
+       * ```ts
        * // change the measure type to length
        * JMap.Application.Measure.activateMeasureType("length")
        * ```
@@ -867,8 +865,8 @@ declare namespace JMap {
        *
        * Returns the current active measure type.
        *
-       * @example ```ts
-       *
+       * @example
+       * ```ts
        * // return active mesure type
        * JMap.Application.Measure.getActiveMeasureType([])
        * ```
@@ -880,8 +878,8 @@ declare namespace JMap {
        *
        * Returns the current measure selection.
        *
-       * @example ```ts
-       *
+       * @example
+       * ```ts
        * // return current measure selection
        * JMap.Application.Measure.getSelectedIds([])
        * ```
@@ -896,8 +894,8 @@ declare namespace JMap {
        * If active, measures can be selected by clicking on the map (then changed or removed).
        *
        * @param isSelectionActive true to activate selection mode, false to deactivate
-       * @example ```ts
-       *
+       * @example
+       * ```ts
        * // activate selection of measures
        * JMap.Application.Measure.setSelectionActive(true)
        *
@@ -914,8 +912,8 @@ declare namespace JMap {
        *
        * Returns deleted measure count.
        *
-       * @example ```ts
-       *
+       * @example
+       * ```ts
        * // delete all measures
        * const deletedMeasuresCount = JMap.Application.Measure.deleteAll()
        * ```
@@ -929,8 +927,8 @@ declare namespace JMap {
        *
        * Returns deleted measure count.
        *
-       * @example ```ts
-       *
+       * @example
+       * ```ts
        * // delete all selected measures
        * const deletedMeasuresCount = JMap.Application.Measure.deleteSelected()
        * ```
@@ -944,8 +942,8 @@ declare namespace JMap {
        *
        * @throws if measure is not found
        * @param measureIds list of measure ids
-       * @example ```ts
-       *
+       * @example
+       * ```ts
        * // delete measure having id="bc4fc07f2e84eb50f5962d3d41c836cb"
        * const deletedMeasuresCount = JMap.Application.Measure.deleteMeasuresById("bc4fc07f2e84eb50f5962d3d41c836cb")
        * ```
@@ -959,8 +957,8 @@ declare namespace JMap {
        *
        * Returns deleted measure count.
        *
-       * @example ```ts
-       *
+       * @example
+       * ```ts
        * // delete all line measures (if exist)
        * const deletedMeasuresCount = JMap.Application.Measure.deleteAllLines()
        * ```
@@ -974,8 +972,8 @@ declare namespace JMap {
        *
        * Returns deleted measure count.
        *
-       * @example ```ts
-       *
+       * @example
+       * ```ts
        * // delete all polygon measures (if exist)
        * const deletedMeasuresCount = JMap.Application.Measure.deleteAllPolygons()
        * ```
@@ -989,8 +987,8 @@ declare namespace JMap {
        *
        * Returns deleted measure count.
        *
-       * @example ```ts
-       *
+       * @example
+       * ```ts
        * // delete all circle measures (if exist)
        * const deletedMeasuresCount = JMap.Application.Measure.deleteAllCircles()
        * ```
@@ -1002,8 +1000,8 @@ declare namespace JMap {
        *
        * Returns the current measurement system used by the Measurements Panel
        *
-       * @example ```ts
-       *
+       * @example
+       * ```ts
        * // get the current measurement system
        * console.log(JMap.Application.Measure.getMeasurementSystem())
        * // "geodetic"
@@ -1025,8 +1023,8 @@ declare namespace JMap {
        * Be warned that lengths or areas in planar context are not representative of the real dimensions on the earth's surface. The only supported planar projection for measurements is EPSG:3857.
        *
        * @param measurementSystem "geodetic" (default) or "planar"
-       * @example ```ts
-       *
+       * @example
+       * ```ts
        * // set the current measurement system to "geodetic"
        * JMap.Application.Measure.setMeasurementSystem("geodetic")
        * ```
@@ -1040,8 +1038,8 @@ declare namespace JMap {
        *
        * @param isEnabled true to enable snap mode, false to disable
        * @throws if isEnabled is not a boolean
-       * @example ```ts
-       *
+       * @example
+       * ```ts
        * // enable snap mode
        * JMap.Application.Measure.setSnapEnabled(true)
        * ```
@@ -1055,8 +1053,8 @@ declare namespace JMap {
        *
        * @param layerId the JMap layer id
        * @throws if layer not found
-       * @example ```ts
-       *
+       * @example
+       * ```ts
        * // snap will target the features of the layer having id=1
        * JMap.Application.Measure.setSnapLayerId(1)
        * ```
@@ -1077,8 +1075,8 @@ declare namespace JMap {
        *
        * This function returns the id of the layer for which the selection is displayed.
        *
-       * @example ```ts
-       *
+       * @example
+       * ```ts
        * // return the layer id of the displayed selection
        * JMap.Application.Selection.getDisplayedLayerId()
        * ```
@@ -1093,8 +1091,8 @@ declare namespace JMap {
        * If layer selection has no selection, hides the layer selection list.
        *
        * @throws if layer not found for the given layer id
-       * @example ```ts
-       *
+       * @example
+       * ```ts
        * // display the layer id=2 selection
        * JMap.Application.Selection.setDisplayedLayerId(2)
        * ```
@@ -1106,8 +1104,8 @@ declare namespace JMap {
        *
        * Changes the current type of selection
        * @param selectionType The new selection type to apply
-       * @example ```ts
-       *
+       * @example
+       * ```ts
        * // change the selection type to rectangle
        * JMap.Application.Selection.activateSelectionType("rectangle")
        * ```
@@ -1119,8 +1117,8 @@ declare namespace JMap {
        *
        * Returns the current active type of selection
        *
-       * @example ```ts
-       *
+       * @example
+       * ```ts
        * // return the current active selection type
        * JMap.Application.Selection.getActiveSelectionType()
        * ```
@@ -1132,8 +1130,8 @@ declare namespace JMap {
        *
        * Returns true if the selection data table is diaplayed.
        *
-       * @example ```ts
-       *
+       * @example
+       * ```ts
        * // return true if the selection data table is visible
        * JMap.Application.Selection.getTableVisibility()
        * ```
@@ -1145,8 +1143,8 @@ declare namespace JMap {
        *
        * Hides or shows the selection data table.
        *
-       * @example ```ts
-       *
+       * @example
+       * ```ts
        * // make selection data table visible
        * JMap.Application.Selection.setTableVisibility(true)
        *
@@ -1161,8 +1159,8 @@ declare namespace JMap {
        *
        * Returns true if the selection table is displayed in an external browser tab.
        *
-       * @example ```ts
-       *
+       * @example
+       * ```ts
        * // returns true if the selection table is displayed in an external browser tab.
        * JMap.Application.Selection.isTableDisplayedInTab()
        * ```
@@ -1176,8 +1174,8 @@ declare namespace JMap {
        *
        * If the table is not visible, make it visible.
        *
-       * @example ```ts
-       *
+       * @example
+       * ```ts
        * // displays the selection table in another tab.
        * JMap.Application.Selection.openTableInTab()
        * ```
@@ -1193,8 +1191,8 @@ declare namespace JMap {
        *
        * If the table is opened in another tab, close the tab and display the table over the map.
        *
-       * @example ```ts
-       *
+       * @example
+       * ```ts
        * // closes the selection table tab.
        * JMap.Application.Selection.closeTableTab()
        * ```
@@ -1207,8 +1205,8 @@ declare namespace JMap {
        * Unselects all features for a given layer id.
        *
        * @param layerId the JMap layer id
-       * @example ```ts
-       *
+       * @example
+       * ```ts
        * // clear the layer id=2 selection
        * JMap.Application.Selection.clearSelectionForLayer(2)
        * ```
@@ -1220,7 +1218,8 @@ declare namespace JMap {
        *
        * Clears the current selection
        *
-       * @example ```ts
+       * @example
+       * ```ts
        * // Clear the current selection
        * JMap.Application.Selection.clearSelection()
        * ```
@@ -1234,7 +1233,8 @@ declare namespace JMap {
        *
        * @param feature the given feature
        * @param selectionType if not provided the method use
-       * @example ```ts
+       * @example
+       * ```ts
        * // will select all features that intersect the provided line feature
        * JMap.Application.Selection.selectFromFeature(lineFeature)
        * ```
@@ -1248,7 +1248,8 @@ declare namespace JMap {
        *
        * If no selection, export an empty file.
        *
-       * @example ```ts
+       * @example
+       * ```ts
        * // download the current selection as an excel file
        * JMap.Application.Selection.exportAsExcelFile()
        * ```
@@ -1261,7 +1262,8 @@ declare namespace JMap {
        * Pans and zooms the map to display the current selection.
        *
        * @param options optional options
-       * @example ```ts
+       * @example
+       * ```ts
        * // fit the map to display selected features
        * JMap.Application.Selection.fitMapToDisplayLayerSelection()
        * ```
@@ -1287,8 +1289,8 @@ declare namespace JMap {
        * @throws if project id invalid or project not found
        * @param projectId the JMap project id
        * @returns the project
-       * @example ```ts
-       *
+       * @example
+       * ```ts
        * // activate project id=33
        * JMap.Application.Project.activateById(33)
        * ```
@@ -1300,8 +1302,8 @@ declare namespace JMap {
        *
        * Displays or hides the project list selection panel.
        *
-       * @example ```ts
-       *
+       * @example
+       * ```ts
        * // display the project list selection panel
        * JMap.Application.Project.setSelectionPanelVisibility(true)
        * ```
@@ -1336,8 +1338,8 @@ declare namespace JMap {
            * diacritical characters insensitive.
            *
            * @param nameFilter the name filter to apply
-           * @example ```ts
-           *
+           * @example
+           * ```ts
            * // In the layer panel will display only layers whose name matches "pro" (case-insensitive)
            * JMap.Application.Layer.setName("pro")
            * ```
@@ -1355,8 +1357,8 @@ declare namespace JMap {
            * a) the name filter contains at least 2 characters
            * b) one of the layer filters has been added to the filtering configuration
            *
-           * @example ```ts
-           *
+           * @example
+           * ```ts
            * // filter configuration is initially empty
            *
            * // activate the filters
@@ -1380,8 +1382,8 @@ declare namespace JMap {
            * or by calling a JMap Server NG API method to activate it.
            * See {@link JMap.Application.Layer.Tree.Filter.isApplied} for more details.
            *
-           * @example ```ts
-           *
+           * @example
+           * ```ts
            * // activate the filters
            * JMap.Application.Layer.Tree.Filter.setActive(false)
            *
@@ -1401,8 +1403,8 @@ declare namespace JMap {
            * See {@link JMap.Application.Layer.Tree.Filter.isApplied} for more details
            *
            * @param active a boolean
-           * @example ```ts
-           *
+           * @example
+           * ```ts
            * // activate the filters
            * JMap.Application.Layer.Tree.Filter.setActive(false)
            *
@@ -1418,8 +1420,8 @@ declare namespace JMap {
            * Applies the current filter configuration on the map. All layers not matching the filter will be hidden, and only those
            * that match the filter will stay visible on the map. If no filter is defined (or appliable), no change is applied on the map.
            *
-           * @example ```ts
-           *
+           * @example
+           * ```ts
            * // Apply the current filter
            * JMap.Application.Layer.Tree.Filter.applyToMap()
            * ```
@@ -1432,8 +1434,8 @@ declare namespace JMap {
            * Tests if the specified filter exists.
            *
            * @param filterId the filter id
-           * @example ```ts
-           *
+           * @example
+           * ```ts
            * // create a filter
            * JMap.Application.Layer.Tree.Filter.add({
            *  1,
@@ -1455,8 +1457,8 @@ declare namespace JMap {
            * Tests if at least one filter associated with the specified metadata id exists.
            *
            * @param metadataId the metadata id
-           * @example ```ts
-           *
+           * @example
+           * ```ts
            * // filter collection is initially empty
            *
            * // create a filter
@@ -1479,8 +1481,8 @@ declare namespace JMap {
            *
            * Returns an object containing the current name filter and an array of all current filters.
            *
-           * @example ```ts
-           *
+           * @example
+           * ```ts
            * // get filters configuration
            * console.log(JMap.Application.Layer.Tree.Filter.getAll())
            * // {
@@ -1507,8 +1509,8 @@ declare namespace JMap {
            * Retrieves the specified filter by id.
            *
            * @param filterId the filter id
-           * @example ```ts
-           *
+           * @example
+           * ```ts
            * // get filter id=1
            * JMap.Application.Layer.Tree.Filter.getById(1)
            * // {"id":1,
@@ -1530,8 +1532,8 @@ declare namespace JMap {
            * Adds a filter. The list of available metadata schema items can be retieved by calling {@link JMap.Layer.getMetadataSchema}.
            *
            * @param filter a JAppAnyLayerFilter object
-           * @example ```ts
-           *
+           * @example
+           * ```ts
            * // add a filter to the config
            * JMap.Application.Layer.Tree.Filter.add({
            *  1,
@@ -1550,8 +1552,8 @@ declare namespace JMap {
            * Removes the specified filter from the filter configuration.
            *
            * @param filterId the id of the filter to delete
-           * @example ```ts
-           *
+           * @example
+           * ```ts
            * // delete filter id=1
            * JMap.Application.Layer.Tree.Filter.deleteById(1)
            * ```
@@ -1563,8 +1565,8 @@ declare namespace JMap {
            *
            * Opens the Add Filter dialog box, and activates the Layer panel if it is not already active.
            *
-           * @example ```ts
-           *
+           * @example
+           * ```ts
            * // open Add Filter UI
            * JMap.Application.Layer.Tree.Filter.openAddFilterDialog()
            * ```
@@ -1576,8 +1578,8 @@ declare namespace JMap {
            *
            * Closes the Add Filter dialog box (without saving the filter).
            *
-           * @example ```ts
-           *
+           * @example
+           * ```ts
            * // close Add Filter UI
            * JMap.Application.Layer.Tree.Filter.closeAddFilterDialog()
            * ```
@@ -1605,8 +1607,8 @@ declare namespace JMap {
            *
            * @throws if layer not found
            * @param layerId the JMap layer id
-           * @example ```ts
-           *
+           * @example
+           * ```ts
            * // opens the edition panel, with the "dynamic-filter" tab activated, for layer id=3.
            * JMap.Application.Layer.Edition.DynamicFilter.openPanel(3)
            * ```
@@ -1618,8 +1620,8 @@ declare namespace JMap {
            *
            * If open, closes the edition panel.
            *
-           * @example ```ts
-           *
+           * @example
+           * ```ts
            * // closes the dynamic filter panel if open.
            * JMap.Application.Layer.Edition.DynamicFilter.closePanel()
            * ```
@@ -1633,8 +1635,8 @@ declare namespace JMap {
            *
            * @throws if layer not found
            * @param layerId the JMap layer id
-           * @example ```ts
-           *
+           * @example
+           * ```ts
            * // opens the dynamic filter creation dialog for layer id=3
            * JMap.Application.Layer.Edition.DynamicFilter.openCreateDialog(3)
            * ```
@@ -1649,8 +1651,8 @@ declare namespace JMap {
            * @throws if layer or condition not found
            * @param layerId the JMap layer id
            * @param conditionId the JMap dynamic filter condition id
-           * @example ```ts
-           *
+           * @example
+           * ```ts
            * // opens the dynamic filter condition creation dialog for layer id=3
            * JMap.Application.Layer.Edition.DynamicFilter.openUpdateDialog(3)
            * ```
@@ -1662,8 +1664,8 @@ declare namespace JMap {
            *
            * If open, close the dynamic filter dialog (as well for creation or update).
            *
-           * @example ```ts
-           *
+           * @example
+           * ```ts
            * // closes the edition (any tab) panel if open.
            * JMap.Application.Layer.Edition.DynamicFilter.closeDialog()
            * ```
@@ -1684,8 +1686,8 @@ declare namespace JMap {
            *
            * @throws if layer not found
            * @param layerId the JMap layer id
-           * @example ```ts
-           *
+           * @example
+           * ```ts
            * // open the edition panel, with "info" tab activated, for layer id=3.
            * JMap.Application.Layer.Edition.Info.openPanel(3)
            * ```
@@ -1697,8 +1699,8 @@ declare namespace JMap {
            *
            * If open, closes the edition panel.
            *
-           * @example ```ts
-           *
+           * @example
+           * ```ts
            * // closes the edition (any tab) panel if open.
            * JMap.Application.Layer.Edition.DynamicFilter.closePanel()
            * ```
@@ -1719,8 +1721,8 @@ declare namespace JMap {
            *
            * @throws if layer not found
            * @param layerId the JMap layer id
-           * @example ```ts
-           *
+           * @example
+           * ```ts
            * // opens the edition panel, with "thematics" tab activated, for layer id=3.
            * JMap.Application.Layer.Edition.Thematic.openPanel(3)
            * ```
@@ -1732,8 +1734,8 @@ declare namespace JMap {
            *
            * If open, closes the edition panel.
            *
-           * @example ```ts
-           *
+           * @example
+           * ```ts
            * // closes the edition (any tab) panel if open.
            * JMap.Application.Layer.Edition.DynamicFilter.closePanel()
            * ```
@@ -1753,8 +1755,8 @@ declare namespace JMap {
          * @throws If layer is not found or layerId is correspond to a layer group, if activeTab is incorrect
          * @param layerId JMap layer id
          * @param activeTab the tab to display: "thematics" or "dynamic-filter"
-         * @example ```ts
-         *
+         * @example
+         * ```ts
          * // edits the layer's id="3" thematics (if layer 3 has at least one thematic set)
          * JMap.Application.Layer.Edition.openPanel(3, "thematics")
          *
@@ -1769,8 +1771,8 @@ declare namespace JMap {
          *
          * If layer edition panel is opened, will close it. Will stop edition and show the layer tree panel.
          *
-         * @example ```ts
-         *
+         * @example
+         * ```ts
          * // closes the layer edition panel
          * JMap.Application.Layer.Edition.closePanel()
          * ```
@@ -1796,8 +1798,8 @@ declare namespace JMap {
          *
          * Returns the DOM div element id where application UI has been inserted.
          *
-         * @example ```ts
-         *
+         * @example
+         * ```ts
          * // return the dom container id, ex : "jmapserver-ng-types"
          * JMap.Application.UI.Container.getId()
          * ```
@@ -1809,8 +1811,8 @@ declare namespace JMap {
          *
          * Returns the dom container width in pixel.
          *
-         * @example ```ts
-         *
+         * @example
+         * ```ts
          * // return the dom container width, ex : 1230
          * JMap.Application.UI.Container.getWidth()
          * ```
@@ -1822,8 +1824,8 @@ declare namespace JMap {
          *
          * Returns the dom container height in pixel.
          *
-         * @example ```ts
-         *
+         * @example
+         * ```ts
          * // return the dom container height, ex : 966
          * JMap.Application.UI.Container.getHeight()
          * ```
@@ -1836,8 +1838,8 @@ declare namespace JMap {
          * Returns a polygon geometry representing the visible coordinates on the map.
          * Works fine even if the map is pitched or rotated.
          * @throws if map is not loaded
-         * @example ```ts
-         *
+         * @example
+         * ```ts
          * // returns the polygon geometry representing the visible coordinates on the map.
          * // ex :
          * // {
@@ -1866,8 +1868,8 @@ declare namespace JMap {
          * Sets the application left side panel visibility.
          *
          * @param isVisible if true, shows the panel, else hides it
-         * @example ```ts
-         *
+         * @example
+         * ```ts
          * // Show the left side panel
          * JMap.Application.UI.Sidepanel.setVisible(true)
          *
@@ -1882,8 +1884,8 @@ declare namespace JMap {
          *
          * Returns true if the JMap Server NG main panel on the left is opened.
          *
-         * @example ```ts
-         *
+         * @example
+         * ```ts
          * // returns true if side panel is opened
          * JMap.Application.UI.SidePanel.isVisible()
          * ```
@@ -1899,8 +1901,8 @@ declare namespace JMap {
          *
          * If the panel is closed, it will open.
          *
-         * @example ```ts
-         *
+         * @example
+         * ```ts
          * // change the side panel visibility
          * JMap.Application.UI.SidePanel.toggleVisibility()
          * ```
@@ -1912,8 +1914,8 @@ declare namespace JMap {
          *
          * Returns the width of the opened side panel in rem.
          *
-         * @example ```ts
-         *
+         * @example
+         * ```ts
          * // returns "28.125rem"
          * JMap.Application.UI.SidePanel.getWidthOpenInRem()
          * ```
@@ -1925,8 +1927,8 @@ declare namespace JMap {
          *
          * Returns the width of the opened side panel in pixel.
          *
-         * @example ```ts
-         *
+         * @example
+         * ```ts
          * // returns 450
          * JMap.Application.UI.SidePanel.getWidthOpenInPixel()
          * ```
@@ -1938,8 +1940,8 @@ declare namespace JMap {
          *
          * Returns the minimum side panel width.
          *
-         * @example ```ts
-         *
+         * @example
+         * ```ts
          * // returns the minimum side panel width
          * JMap.Application.UI.SidePanel.getMinimumWidthOpenInPixel()
          * ```
@@ -1952,9 +1954,9 @@ declare namespace JMap {
          * Returns the minimum side panel width.
          *
          * @throws if new width is not a number, or lower than minimum width
-         * @param width: new panel width in pixel
-         * @example ```ts
-         *
+         * @param width new panel width in pixel
+         * @example
+         * ```ts
          * const newWidth = 500
          * if (JMap.Application.UI.SidePanel.getMinimumWidthOpenInPixel() <= newWidth) {
          *  // returns the minimum side panel width
@@ -1969,8 +1971,8 @@ declare namespace JMap {
          *
          * Returns the width of the closed side panel in rem.
          *
-         * @example ```ts
-         *
+         * @example
+         * ```ts
          * // returns "3.75rem"
          * JMap.Application.UI.SidePanel.getWidthCloseInRem()
          * ```
@@ -1982,8 +1984,8 @@ declare namespace JMap {
          *
          * Returns the width of the closed side panel in pixel.
          *
-         * @example ```ts
-         *
+         * @example
+         * ```ts
          * // returns 60
          * JMap.Application.UI.SidePanel.getWidthCloseInPixel()
          * ```
@@ -1995,8 +1997,8 @@ declare namespace JMap {
          *
          * Returns the width of the main panel (side panel width minus menu width) in rem.
          *
-         * @example ```ts
-         *
+         * @example
+         * ```ts
          * // returns "24.375rem"
          * JMap.Application.UI.SidePanel.getMainPanelWidthInRem()
          * ```
@@ -2008,8 +2010,8 @@ declare namespace JMap {
          *
          * Returns the width of the main panel (side panel width minus menu width) in pixel.
          *
-         * @example ```ts
-         *
+         * @example
+         * ```ts
          * // returns 390
          * JMap.Application.UI.SidePanel.getMainPanelWidthInPixel()
          * ```
@@ -2021,8 +2023,8 @@ declare namespace JMap {
          *
          * Returns the min height of the Panel header section (where the project name is displayed) in rem.
          *
-         * @example ```ts
-         *
+         * @example
+         * ```ts
          * // returns "5rem"
          * JMap.Application.UI.SidePanel.getHeaderMinHeightInRem()
          * ```
@@ -2034,8 +2036,8 @@ declare namespace JMap {
          *
          * Returns the min height of the Panel header section (where the project name is displayed) in pixels.
          *
-         * @example ```ts
-         *
+         * @example
+         * ```ts
          * // returns 80
          * JMap.Application.UI.SidePanel.getHeaderMinHeightInPixel()
          * ```
@@ -2047,8 +2049,8 @@ declare namespace JMap {
          *
          * Returns the min height of the Panel title section (where the panel name is displayed) in rem.
          *
-         * @example ```ts
-         *
+         * @example
+         * ```ts
          * // returns "4rem"
          * JMap.Application.UI.SidePanel.getTitleMinHeightInRem()
          * ```
@@ -2060,8 +2062,8 @@ declare namespace JMap {
          *
          * Returns the min height of the Panel title section (where the panel name is displayed) in pixels.
          *
-         * @example ```ts
-         *
+         * @example
+         * ```ts
          * // returns 64
          * JMap.Application.UI.SidePanel.getTitleMinHeightInPixel()
          * ```
@@ -2080,8 +2082,8 @@ declare namespace JMap {
          *
          * Returns true if the theme is currently dark.
          *
-         * @example ```ts
-         *
+         * @example
+         * ```ts
          * // true or false
          * JMap.Application.UI.Theme.isDark()
          * ```
@@ -2094,8 +2096,8 @@ declare namespace JMap {
          * Changes the UI color theme in dark or light.
          *
          * @param isDark if true make the theme dark, else light
-         * @example ```ts
-         *
+         * @example
+         * ```ts
          * // make the theme dark
          * JMap.Application.UI.Theme.setDark()
          *
@@ -2122,8 +2124,8 @@ declare namespace JMap {
        * Displays or hides the scale control widget.
        *
        * @param isVisible true to display, false to hide
-       * @example ```ts
-       *
+       * @example
+       * ```ts
        * // Display the scale
        * JMap.Application.Print.setScaleControlVisibility(true)
        *
@@ -2138,8 +2140,8 @@ declare namespace JMap {
        *
        * Returns true if the scale control widget is visible, else false.
        *
-       * @example ```ts
-       *
+       * @example
+       * ```ts
        * // true if the scale controle widget is displayed
        * JMap.Application.Print.isScaleControlVisible()
        * ```
@@ -2155,8 +2157,8 @@ declare namespace JMap {
        *
        * @throws if title is not a string
        * @param title The title displayed in the bottom of the print layout
-       * @example ```ts
-       *
+       * @example
+       * ```ts
        * // set title
        * JMap.Application.Print.setPageTitle("My custom title")
        * ```
@@ -2168,8 +2170,8 @@ declare namespace JMap {
        *
        * Returns the title displayed in the bottom of the print layout.
        *
-       * @example ```ts
-       *
+       * @example
+       * ```ts
        * // returns the displayed title
        * JMap.Application.Print.getPageTitle()
        * ```
@@ -2183,8 +2185,8 @@ declare namespace JMap {
        *
        * @throws if subTitle is not a string
        * @param subTitle The subtitle displayed in the bottom of the print layout
-       * @example ```ts
-       *
+       * @example
+       * ```ts
        * // set subtitle
        * JMap.Application.Print.setPageSubTitle("My custom subtitle")
        * ```
@@ -2196,8 +2198,8 @@ declare namespace JMap {
        *
        * Returns the subtitle displayed in the bottom of the print layout.
        *
-       * @example ```ts
-       *
+       * @example
+       * ```ts
        * // returns the displayed subtitle
        * JMap.Application.Print.getPageSubTitle()
        * ```
@@ -2209,8 +2211,8 @@ declare namespace JMap {
        *
        * Returns true if the date is displayed in the bottom of the print layout.
        *
-       * @example ```ts
-       *
+       * @example
+       * ```ts
        * // returns true if the date is visible
        * JMap.Application.Print.isDateVisibile()
        * ```
@@ -2223,8 +2225,8 @@ declare namespace JMap {
        * Sets the date visible or hidden in the bottom of the print layout.
        *
        * @param isVisible true to display, false to hide
-       * @example ```ts
-       *
+       * @example
+       * ```ts
        * // Hide the date
        * JMap.Application.Print.setDateVisibility(false)
        *
@@ -2239,8 +2241,8 @@ declare namespace JMap {
        *
        * Returns true if the north arrow is displayed in the bottom of the print layout.
        *
-       * @example ```ts
-       *
+       * @example
+       * ```ts
        * // returns true if the north arrow is visible
        * JMap.Application.Print.isNorthArrowVisible()
        * ```
@@ -2253,8 +2255,8 @@ declare namespace JMap {
        * Sets the north arrow visible or hidden in the bottom of the print layout.
        *
        * @param isVisible true to display, false to hide
-       * @example ```ts
-       *
+       * @example
+       * ```ts
        * // Hide the north arrow
        * JMap.Application.Print.setNorthArrowVisibility(false)
        *
@@ -2272,8 +2274,8 @@ declare namespace JMap {
        * Different sizes are available: "letter" | "legal" | "a3" | "a4".
        *
        * @deprecated will be removed in the futur
-       * @example ```ts
-       *
+       * @example
+       * ```ts
        * // returns all available paper formats
        * JMap.Application.Print.getAllPaperFormats()
        * ```
@@ -2289,9 +2291,9 @@ declare namespace JMap {
        *
        * @deprecated will be removed in the futur
        * @throws if format is incorrect
-       * @param the paper format object or a {@link JAPP_PRINT_PAPER_SIZES}
-       * @example ```ts
-       *
+       * @param format the paper format object or a {@link JAPP_PRINT_PAPER_SIZES}
+       * @example
+       * ```ts
        * // set the letter paper format
        * JMap.Application.Print.setPaperFormat("letter")
        * ```
@@ -2304,8 +2306,8 @@ declare namespace JMap {
        * Returns the active paper format.
        *
        * @deprecated will be removed in the futur
-       * @example ```ts
-       *
+       * @example
+       * ```ts
        * // returns active paper format
        * JMap.Application.Print.getPaperFormat()
        * ```
@@ -2317,8 +2319,8 @@ declare namespace JMap {
        *
        * Returns true if the print layout is portrait, else false (landscape).
        *
-       * @example ```ts
-       *
+       * @example
+       * ```ts
        * // returns true if the print layout is portrait, else false (landscape)
        * JMap.Application.Print.isOrientationPortrait()
        * ```
@@ -2332,8 +2334,8 @@ declare namespace JMap {
        *
        * @throws if isPortrait is not a boolean
        * @param isPortrait true to display as portrait, false as landscape
-       * @example ```ts
-       *
+       * @example
+       * ```ts
        * // set the layout as portrait
        * JMap.Application.Print.setOrientation(true)
        *
@@ -2350,8 +2352,8 @@ declare namespace JMap {
        *
        * One of the following: "png" | "jpeg" | "pdf"
        *
-       * @example ```ts
-       *
+       * @example
+       * ```ts
        * // returns "png", "jpeg", or "pdf"
        * JMap.Application.Print.getFileType()
        * ```
@@ -2365,8 +2367,8 @@ declare namespace JMap {
        *
        * @throws if fileType is not correct
        * @param fileType "png", "jpeg", or "pdf"
-       * @example ```ts
-       *
+       * @example
+       * ```ts
        * // set the layout as portrait
        * JMap.Application.Print.setFileType("pdf")
        * ```
@@ -2380,8 +2382,8 @@ declare namespace JMap {
        *
        * @throws if isHiResolution is not a boolean
        * @param isHiResolution true or false
-       * @example ```ts
-       *
+       * @example
+       * ```ts
        * // set export mode to hi resolution
        * JMap.Application.Print.setHiResolution(true)
        * ```
@@ -2393,8 +2395,8 @@ declare namespace JMap {
        *
        * Returns true if the map export is set to hi resolution, false otherwise.
        *
-       * @example ```ts
-       *
+       * @example
+       * ```ts
        * // get export resolution
        * JMap.Application.Print.getHiResolution()
        * // true
@@ -2407,8 +2409,8 @@ declare namespace JMap {
        *
        * Builds print image and launches downwnload of the file
        *
-       * @example ```ts
-       *
+       * @example
+       * ```ts
        * // build print image and launch downwnload of the file
        * JMap.Application.Print.takeCapture()
        * ```
@@ -2431,8 +2433,8 @@ declare namespace JMap {
        *
        * @param groupId the query group id
        * @param queryId the query id
-       * @example ```ts
-       *
+       * @example
+       * ```ts
        * // activate query id=43 on group id=23
        * JMap.Application.Print.activateQuery(23, 43)
        * ```
@@ -2446,8 +2448,8 @@ declare namespace JMap {
        *
        * If a query form is active (= its form is displayed), hidea it and returns to the query list.
        *
-       * @example ```ts
-       *
+       * @example
+       * ```ts
        * // if a query form is displayed, hide it and return to the query list.
        * JMap.Application.Print.deactivateQuery()
        * ```
@@ -2461,8 +2463,8 @@ declare namespace JMap {
        *
        * If there is no active form, warns in the console and returns an empty object {}.
        *
-       * @example ```ts
-       *
+       * @example
+       * ```ts
        * // returns the current query form data
        * JMap.Application.Print.getDefaultData()
        * ```
@@ -2476,8 +2478,8 @@ declare namespace JMap {
        *
        * @throws if no query is active
        * @param values the form data, depends on the form
-       * @example ```ts
-       *
+       * @example
+       * ```ts
        * // set the current query form data
        * JMap.Application.Print.setDefaultData({
        *  $param1: "black",
@@ -2494,8 +2496,8 @@ declare namespace JMap {
        *
        * If there is no active form, does nothing.
        *
-       * @example ```ts
-       *
+       * @example
+       * ```ts
        * // clear the current query form data
        * JMap.Application.Print.clearDefaultData()
        * ```
@@ -2511,8 +2513,8 @@ declare namespace JMap {
        *
        * @throws if isVisibleInDialog is not a boolean
        * @param isVisibleInDialog true in modal window, false in left panel
-       * @example ```ts
-       *
+       * @example
+       * ```ts
        * // display the current form in a modal window
        * JMap.Application.Print.displayInDialog(true)
        *
@@ -2536,9 +2538,9 @@ declare namespace JMap {
        * If no feature is found, the Promise rejects with a human readable error in the current user's locale.
        *
        * @throws if no query is active
-       * @param value the form data, depends on the form
-       * @example ```ts
-       *
+       * @param values the form data, depends on the form
+       * @example
+       * ```ts
        * // display the current form in a modal window
        * JMap.Application.Print
        *   .processQuery({
@@ -2602,8 +2604,8 @@ declare namespace JMap {
            *
            * @param listenerId Your listener id (must be unique)
            * @param fn Your listener function
-           * @example ```ts
-           *
+           * @example
+           * ```ts
            * // log a message in the console once the application is loaded
            * JMap.Application.Event.Main.on.appReady(
            *   "custom-app-ready",
@@ -2630,8 +2632,8 @@ declare namespace JMap {
          * If the listener is inactive, it will be reactivated and will be called again ...
          *
          * @param listenerId The listener id
-         * @example ```ts
-         *
+         * @example
+         * ```ts
          * // activate the listener "my-main-listener"
          * JMap.Application.Event.Main.activate("my-main-listener")
          * ```
@@ -2648,8 +2650,8 @@ declare namespace JMap {
          * If the listener is active, it will be deactivated and will be ignored ...
          *
          * @param listenerId The listener id
-         * @example ```ts
-         *
+         * @example
+         * ```ts
          * // deactivate the listener "my-main-listener"
          * JMap.Application.Event.Main.deactivate("my-main-listener")
          * ```
@@ -2666,8 +2668,8 @@ declare namespace JMap {
          * Removes the listener from JMap Server NG. The listener is deleted and never called again after that.
          *
          * @param listenerId The listener id
-         * @example ```ts
-         *
+         * @example
+         * ```ts
          * // remove the listener "my-main-listener"
          * JMap.Application.Event.Main.remove("my-main-listener")
          * ```
@@ -2696,8 +2698,8 @@ declare namespace JMap {
            *
            * @param listenerId Your listener id (must be unique)
            * @param fn Your listener function
-           * @example ```ts
-           *
+           * @example
+           * ```ts
            * // log a message in the console once the application is loaded
            * JMap.Application.Event.Form.on.autoSubmit(
            *   "custom-auto-submit",
@@ -2720,8 +2722,8 @@ declare namespace JMap {
          * If the listener is inactive, it will be reactivated and will be called again ...
          *
          * @param listenerId The listener id
-         * @example ```ts
-         *
+         * @example
+         * ```ts
          * // activate the listener "my-form-listener"
          * JMap.Application.Event.Form.activate("my-form-listener")
          * ```
@@ -2738,8 +2740,8 @@ declare namespace JMap {
          * If the listener is active, it will be deactivated and will be ignored ...
          *
          * @param listenerId The listener id
-         * @example ```ts
-         *
+         * @example
+         * ```ts
          * // deactivate the listener "my-form-listener"
          * JMap.Application.Event.Form.deactivate("my-form-listener")
          * ```
@@ -2756,8 +2758,8 @@ declare namespace JMap {
          * Removes the listener from JMap Server NG. The listener is deleted and never called again after that.
          *
          * @param listenerId The listener id
-         * @example ```ts
-         *
+         * @example
+         * ```ts
          * // remove the listener "my-form-listener"
          * JMap.Application.Event.Form.remove("my-form-listener")
          * ```
@@ -2788,8 +2790,8 @@ declare namespace JMap {
            *
            * @param listenerId Your listener id (must be unique)
            * @param fn Your listener function
-           * @example ```ts
-           *
+           * @example
+           * ```ts
            * // Triggered when a user double clicks on a layer name
            * JMap.Application.Event.Layer.on.doubleClick("my-layer-double-click-listener", params => {
            *   const layer = params.layer
@@ -2815,8 +2817,8 @@ declare namespace JMap {
          * If the listener is inactive, it will be reactivated and will be called again ...
          *
          * @param listenerId The listener id
-         * @example ```ts
-         *
+         * @example
+         * ```ts
          * // activate the listener "my-layer-listener"
          * JMap.Application.Event.Layer.activate("my-layer-listener")
          * ```
@@ -2833,8 +2835,8 @@ declare namespace JMap {
          * If the listener is active, it will be deactivated and will be ignored ...
          *
          * @param listenerId The listener id
-         * @example ```ts
-         *
+         * @example
+         * ```ts
          * // deactivate the listener "my-layer-listener"
          * JMap.Application.Event.Layer.deactivate("my-layer-listener")
          * ```
@@ -2851,8 +2853,8 @@ declare namespace JMap {
          * Removes the listener from JMap Server NG. The listener is deleted and never called again after that.
          *
          * @param listenerId The listener id
-         * @example ```ts
-         *
+         * @example
+         * ```ts
          * // remove the listener "my-layer-listener"
          * JMap.Application.Event.Layer.remove("my-layer-listener")
          * ```
@@ -2883,8 +2885,8 @@ declare namespace JMap {
            *
            * @param listenerId Your listener id (must be unique)
            * @param fn Your listener function
-           * @example ```ts
-           *
+           * @example
+           * ```ts
            * // Triggered when a user register a new extension
            * JMap.Application.Event.Extension.on.registration("my-extension-listener", params => {
            *   const extensionId = params.extensionId
@@ -2904,8 +2906,8 @@ declare namespace JMap {
          * If the listener is inactive, it will be reactivated and will be called again ...
          *
          * @param listenerId The listener id
-         * @example ```ts
-         *
+         * @example
+         * ```ts
          * // activate the listener "my-extension-listener"
          * JMap.Application.Event.Extension.activate("my-extension-listener")
          * ```
@@ -2922,8 +2924,8 @@ declare namespace JMap {
          * If the listener is active, it will be deactivated and will be ignored ...
          *
          * @param listenerId The listener id
-         * @example ```ts
-         *
+         * @example
+         * ```ts
          * // deactivate the listener "my-extension-listener"
          * JMap.Application.Event.Extension.deactivate("my-extension-listener")
          * ```
@@ -2940,8 +2942,8 @@ declare namespace JMap {
          * Removes the listener from JMap Server NG. The listener is deleted and never called again after that.
          *
          * @param listenerId The listener id
-         * @example ```ts
-         *
+         * @example
+         * ```ts
          * // remove the listener "my-extension-listener"
          * JMap.Application.Event.Extension.remove("my-extension-listener")
          * ```
@@ -2970,8 +2972,8 @@ declare namespace JMap {
            *
            * @param listenerId Your listener id (must be unique)
            * @param fn Your listener function
-           * @example ```ts
-           *
+           * @example
+           * ```ts
            * // log a message in the console when the side panel is closed or opened
            * JMap.Application.Event.UI.on.sidePanelVisibilityChanged(
            *   "custom-side-panel-visibility-changed",
@@ -2991,8 +2993,8 @@ declare namespace JMap {
            *
            * @param listenerId Your listener id (must be unique)
            * @param fn Your listener function
-           * @example ```ts
-           *
+           * @example
+           * ```ts
            * // log a message in the console when the side panel width changes
            * JMap.Application.Event.UI.on.sidePanelWidthChanged(
            *   "custom-side-panel-width-changed",
@@ -3016,8 +3018,8 @@ declare namespace JMap {
          * If the listener is inactive, it will be reactivated and will be called again ...
          *
          * @param listenerId The listener id
-         * @example ```ts
-         *
+         * @example
+         * ```ts
          * // activate the listener "my-ui-listener"
          * JMap.Application.Event.UI.activate("my-ui-listener")
          * ```
@@ -3034,8 +3036,8 @@ declare namespace JMap {
          * If the listener is active, it will be deactivated and will be ignored ...
          *
          * @param listenerId The listener id
-         * @example ```ts
-         *
+         * @example
+         * ```ts
          * // deactivate the listener "my-ui-listener"
          * JMap.Application.Event.UI.deactivate("my-ui-listener")
          * ```
@@ -3052,8 +3054,8 @@ declare namespace JMap {
          * Removes the listener from JMap Server NG. The listener is deleted and never called again after that.
          *
          * @param listenerId The listener id
-         * @example ```ts
-         *
+         * @example
+         * ```ts
          * // remove the listener "my-ui-listener"
          * JMap.Application.Event.UI.remove("my-ui-listener")
          * ```
@@ -3086,8 +3088,8 @@ declare namespace JMap {
            *
            * @param listenerId Your listener id (must be unique)
            * @param fn Your listener function
-           * @example ```ts
-           *
+           * @example
+           * ```ts
            * // Triggered after a map-context is applied
            * JMap.Application.Event.MapContext.on.afterApply("my-after-apply-listener", params => {
            *   console.info(`After apply map context id="${params.context.title}"`, params.context)
@@ -3113,8 +3115,8 @@ declare namespace JMap {
          * If the listener is inactive, it will be reactivated and will be called again ...
          *
          * @param listenerId The listener id
-         * @example ```ts
-         *
+         * @example
+         * ```ts
          * // activate the listener "my-mapcontext-listener"
          * JMap.Application.Event.MapContext.activate("my-mapcontext-listener")
          * ```
@@ -3131,8 +3133,8 @@ declare namespace JMap {
          * If the listener is active, it will be deactivated and will be ignored ...
          *
          * @param listenerId The listener id
-         * @example ```ts
-         *
+         * @example
+         * ```ts
          * // deactivate the listener "my-mapcontext-listener"
          * JMap.Application.Event.MapContext.deactivate("my-mapcontext-listener")
          * ```
@@ -3149,8 +3151,8 @@ declare namespace JMap {
          * Remove the listener from JMap Server NG Core library. The listener is deleted and never called again after that.
          *
          * @param listenerId The listener id
-         * @example ```ts
-         *
+         * @example
+         * ```ts
          * // remove the listener "my-mapcontext-listener"
          * JMap.Application.Event.MapContext.remove("my-mapcontext-listener")
          * ```
@@ -3179,8 +3181,8 @@ declare namespace JMap {
        *
        * @param action : the action to add
        * @param index : will insert at a specific index in the menu. Start at 0. If index is not correct insert at the end
-       * @example ```ts
-       *
+       * @example
+       * ```ts
        * JMap.Application.User.addPopupMenuAction({
        *   id: "my-unique-id",
        *   icon: "fas fa-info-circle",
@@ -3199,8 +3201,8 @@ declare namespace JMap {
        *
        * @param actionId the action menu id
        * @throws if actionId is not a string (non empty)
-       * @example ```ts
-       *
+       * @example
+       * ```ts
        * // returns true if the action menu id="my-custom-action-menu" exists, else false
        * JMap.Application.User.existsPopupMenuActionById("my-custom-action-menu")
        * ```
@@ -3214,8 +3216,8 @@ declare namespace JMap {
        *
        * @param actionId the action menu id
        * @throws if actionId is not valid, or not found
-       * @example ```ts
-       *
+       * @example
+       * ```ts
        * // remove the action menu id="my-custom-action-menu"
        * JMap.Application.User.removePopupMenuActionById("my-custom-action-menu")
        * ```
@@ -3235,9 +3237,9 @@ declare namespace JMap {
        * Registers your own JMap Server NG extension.
        *
        * @throws Error if a parameter is not correct
-       * @param extensionModel The extension model
-       * @example ```ts
-       *
+       * @param extension The extension model
+       * @example
+       * ```ts
        * JMap.Application.Extension.register({
        *  id: "MyExtension", // Unique id
        *  initFn: () => {
@@ -3267,8 +3269,8 @@ declare namespace JMap {
        *
        * @throws Error if extensionId format is not correct
        * @param extensionId The extension id
-       * @example ```ts
-       *
+       * @example
+       * ```ts
        * // returns true if extension id="my-extension" is in use or not
        * JMap.Extension.isRegistered("my-extension")
        * ```
@@ -3282,8 +3284,8 @@ declare namespace JMap {
        *
        * Desn't list JMap Server NG Core extensions, only JMap Server NG extensions.
        *
-       * @example ```ts
-       *
+       * @example
+       * ```ts
        * // Could returns [ "my-first-extension", "my-second-extension" ]
        * JMap.Extension.getAllRegisteredIds()
        * ```
@@ -3304,8 +3306,8 @@ declare namespace JMap {
        *
        * @param message the text of the message
        * @param options a JAppMessageOptions object
-       * @example ```ts
-       *
+       * @example
+       * ```ts
        * const message = "This operation is not allowed"
        * JMap.Application.Message.error(message, { duration: 5000 })
        * ```
@@ -3319,8 +3321,8 @@ declare namespace JMap {
        *
        * @param message the text of the message
        * @param options a JAppMessageOptions object
-       * @example ```ts
-       *
+       * @example
+       * ```ts
        * const message = "This operation has no effect"
        * JMap.Application.Message.warning(message, { duration: 5000 })
        * ```
@@ -3334,8 +3336,8 @@ declare namespace JMap {
        *
        * @param message the text of the message
        * @param options a JAppMessageOptions object
-       * @example ```ts
-       *
+       * @example
+       * ```ts
        * const message = "You are here"
        * JMap.Application.Message.info(message, { duration: 5000 })
        * ```
@@ -3349,8 +3351,8 @@ declare namespace JMap {
        *
        * @param message the text of the message
        * @param options a JAppMessageOptions object
-       * @example ```ts
-       *
+       * @example
+       * ```ts
        * const message = "The operation was successful"
        * JMap.Application.Message.success(message, { duration: 5000 })
        * ```
@@ -3369,8 +3371,8 @@ declare namespace JMap {
        * The optional onCancel callback is called when the cancel button is clicked.
        *
        * @param params message parameters
-       * @example ```ts
-       *
+       * @example
+       * ```ts
        * JMap.Application.Message.confirmMessage({
        *   message: "Are you sure to do a given action ?",
        *   onSuccess: () => console.log(`The user is sure`),
@@ -3395,8 +3397,8 @@ declare namespace JMap {
        *
        * @param message the text of the message
        * @param options a JAppMessageOptions object
-       * @example ```ts
-       *
+       * @example
+       * ```ts
        * const message = "The operation has failed"
        * const level = "error"
        * JMap.Application.Message.display(message, { duration: 5000 , severity: level})
@@ -3422,8 +3424,8 @@ declare namespace JMap {
        * @param message the message to display
        * @throws if message is not a non empty string
        * @returns the message id, usefull when you display multiple messages at the same time, but want to close only one.
-       * @example ```ts
-       *
+       * @example
+       * ```ts
        * // display a waiting overlay, making the app unavailable for user as long it is displayed
        * const messageId = JMap.Application.Message.displayWaitingOverlay("Please wait, processing data")
        * // NG app is now unavailable for the user
@@ -3455,8 +3457,8 @@ declare namespace JMap {
        *
        * @param messageId the message to close
        * @throws if you pass a message id that is not found
-       * @example ```ts
-       *
+       * @example
+       * ```ts
        * // display a waiting overlay, making the app unavailable for user as long it is displayed
        * const messageId = JMap.Application.Message.displayWaitingOverlay("Please wait, processing data")
        * // NG app is now unavailable for the user
@@ -3493,8 +3495,8 @@ declare namespace JMap {
        *
        * @param containerId id of the container where the form will be rendered
        * @param formParams a JFormParams object
-       * @example ```ts
-       *
+       * @example
+       * ```ts
        * // this example will show you how to create a custom form in an extension
        * // it will render the form in the extension panel
        * window.JMAP_OPTIONS = {
@@ -3576,8 +3578,8 @@ declare namespace JMap {
        * Unmounts form by using container Id where it was rendered
        *
        * @param containerId id of the container to unmount
-       * @example ```ts
-       *
+       * @example
+       * ```ts
        * JMap.Application.Form.destroy("new-form")
        * ```
        */
