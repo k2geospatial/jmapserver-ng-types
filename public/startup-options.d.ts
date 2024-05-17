@@ -3,7 +3,8 @@ declare interface JCoreOptions {
    * This section is about the JMap Server NG startup options.
    * 
    * An example of how to configure the application startup options :
-   * @example ```html
+   * @example
+   * ```html
    * <html>
    *   ...
    *   <body>

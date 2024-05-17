@@ -119,7 +119,6 @@ function generateTypedoc() {
     --disableSources true \\
     --entryPoints ${join(__dirname, "./JMap.d.ts")} \\
     --entryPointStrategy expand \\
-    --navigation.fullTree true \\
     --treatWarningsAsErrors true \\
     --treatValidationWarningsAsErrors true
     `,
