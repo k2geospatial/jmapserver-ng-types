@@ -359,7 +359,7 @@ export interface JAppPrintService {
   getFileType(): JAPP_PRINT_FILE_TYPES
   setHiResolution(isHiResolution: boolean): void
   getHiResolution(): boolean
-  takeCapture(): void
+  takeCapture(returnAsScreenCaptureResult?: boolean): Promise<void | JAppPrintCaptureResult>
 }
 
 export interface JAppLayerService {

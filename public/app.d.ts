@@ -2407,15 +2407,37 @@ declare namespace JMap {
       /**
        * **JMap.Application.Print.takeCapture**
        *
-       * Builds print image and launches downwnload of the file
+       * Builds a screen capture of the map and launches the download of the file, or returns the screen capture as a data url embeded in a {@link JAppPrintCaptureResult}
+       * @param returnAsScreenCaptureResult if true, the method will resolve with a {@link JAppPrintCaptureResult} that you can use to embed the image in an HTML page, otherwise the method will resolve with no result
+       *
+       * When passing `returnAsScreenCaptureResult = true`, The screen capture process will take into account all Print parameters defined in the Print panel, including page format, scale, North arrow, title, sub-title, etc, but with the following limitations:
+       *
+       * * the image format returned will always be PNG
+       * * If you want the Print panel overlays be present in the screen capture, you must programaticaly switch to the Print panel before calling JMap.Application.Print.takeCapture(true), otherwise only the map will be captured
+       *
        *
        * @example
        * ```ts
-       * // build print image and launch downwnload of the file
+       * // build print image and launch download of the file
        * JMap.Application.Print.takeCapture()
+       *
+       * // add an image to a document with the print result
+       * JMap.Application.Print.takeCapture(true).then(
+       *    printCaptureResult => {
+       *      const img = document.createElement("img")
+       *      img.src = printCaptureResult.dataUrl
+       *      img.style.position = "absolute"
+       *      img.width = printCaptureResult.width / 4
+       *      img.height = printCaptureResult.height / 4
+       *      img.style.top = "10px"
+       *      img.style.left = "10px"
+       *      img.style.zIndex = 1000
+       *      document.body.appendChild(img)
+       *  }
+       * )
        * ```
        */
-      function takeCapture(): void
+      function takeCapture(returnAsScreenCaptureResult?: boolean): Promise<void | JAppPrintCaptureResult>
     }
 
     /**
