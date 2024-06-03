@@ -25,3 +25,9 @@ declare interface JAppPaperFormat {
   height: number
   ratio: number
 }
+
+declare interface JAppPrintCaptureResult {
+  height: number
+  width: number
+  dataUrl: string
+}
