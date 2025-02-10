@@ -1,6 +1,6 @@
 {
   "name": "jmapserver-ng-types",
-  "version": "2.4.0",
+  "version": "2.4.1",
   "description": "JMap Server specific version of JMap Server NG types and interfaces",
   "main": "src/app.ts",
   "scripts": {
