@@ -56,6 +56,12 @@ declare interface JAppExtension extends JCoreExtension {
    */
   panelTitle?: string | JTranslationItem
   /**
+   * Specify to omit the panel header if required.
+   *
+   * If set to true, NG will not display the panel header, including the extension's title. The extension developer is then responsible for displaying the extension's title inside its panel. The panel scrolling behaviour will also have to be handled by the developer.
+   */
+  omitPanelHeader?: boolean
+  /**
    * An optional map interactor.
    * 
    * See [[JMap.Service.Map.Interaction]] for more details.

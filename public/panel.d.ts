@@ -16,6 +16,7 @@ declare interface JAppPanel {
   icon: string // url or base64 or app name
   iconTooltip: string | JTranslationItem | (() => string)
   interactorId?: string | (() => string | undefined)
+  omitPanelHeader?: boolean
   title?: string | JTranslationItem | (() => string)
   isPopup?: boolean
   onPanelCreation?: (panelContainerId: string) => void
