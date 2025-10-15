@@ -2458,7 +2458,7 @@ declare namespace JMap {
        * @example
        * ```ts
        * // activate query id=43 on group id=23
-       * JMap.Application.Print.activateQuery(23, 43)
+       * JMap.Application.Query.activateQuery(23, 43)
        * ```
        */
       function activateQuery(groupId: JId, queryId: string): void
