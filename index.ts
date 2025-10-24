@@ -15,7 +15,15 @@ export interface JAppState {
   user: JAppUserState
   feature: JAppFeatureState
   geometry: JAppGeometryState
+  projectExtents: JAppProjectExtentsState
 }
+
+export interface JAppProjectExtentsState {
+  draw: JAppDrawState
+  isDrawingMaximumExtent: boolean
+  isDrawingInitialExtent: boolean
+}
+
 
 export interface JAppGeometryState {
   layerId: JId | undefined
