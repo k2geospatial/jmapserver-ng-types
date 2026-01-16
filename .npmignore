@@ -1,9 +1,7 @@
-.vscode
-build
-docs
-node_modules
-_config.yml
-.gitignore
-.prettierrc
-package-lock.json
-tsconfig.json
+*
+!package.json
+!readme.md
+!public
+!public/**
+!all-enums.ts
+!index.ts

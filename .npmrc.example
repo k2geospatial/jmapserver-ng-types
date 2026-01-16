@@ -1,0 +1,2 @@
+# replace <NPM-K2-PUBLISH-TOKEN> with a valid token
+//registry.npmjs.org/:_authToken=<NPM-K2-PUBLISH-TOKEN>

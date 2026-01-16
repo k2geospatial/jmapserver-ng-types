@@ -2,3 +2,5 @@ node_modules
 build/env-config.js
 .vscode
 build/JMap.d.ts
+.env
+.npmrc
