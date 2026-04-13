@@ -2410,6 +2410,7 @@ declare namespace JMap {
        *
        * Sets the parameter determining if the map will be exported in hi resolution or not.
        *
+       * @deprecated Hi resolution is now always enabled by default. This method will be removed in a future version.
        * @throws if isHiResolution is not a boolean
        * @param isHiResolution true or false
        * @example
@@ -2425,6 +2426,7 @@ declare namespace JMap {
        *
        * Returns true if the map export is set to hi resolution, false otherwise.
        *
+       * @deprecated Hi resolution is now always enabled by default. This method will be removed in a future version.
        * @example
        * ```ts
        * // get export resolution
