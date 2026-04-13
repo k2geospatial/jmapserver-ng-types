@@ -2267,6 +2267,36 @@ declare namespace JMap {
       function setNorthArrowVisibility(isVisible: boolean): void
 
       /**
+       * **JMap.Application.Print.isLegendVisible**
+       *
+       * Returns true if the legend is displayed in the print layout.
+       *
+       * @example
+       * ```ts
+       * // returns true if the legend is visible
+       * JMap.Application.Print.isLegendVisible()
+       * ```
+       */
+      function isLegendVisible(): boolean
+
+      /**
+       * **JMap.Application.Print.setLegendVisibility**
+       *
+       * Sets the legend visible or hidden in the print layout.
+       *
+       * @param isVisible true to display, false to hide
+       * @example
+       * ```ts
+       * // Hide the legend
+       * JMap.Application.Print.setLegendVisibility(false)
+       *
+       * // Show the legend
+       * JMap.Application.Print.setLegendVisibility(true)
+       * ```
+       */
+      function setLegendVisibility(isVisible: boolean): void
+
+      /**
        * **JMap.Application.Print.getAllPaperFormats**
        *
        * Returns all available paper formats.

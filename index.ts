@@ -123,7 +123,7 @@ export interface JAppPrintState {
   isDateVisible: boolean
   isNorthArrowVisible: boolean
   isScaleVisible: boolean
-  isLegend: boolean
+  isLegendVisible: boolean
   isHiResolution: boolean
   legendTitle: string
   legendSubTitle: string
@@ -358,6 +358,8 @@ export interface JAppPrintService {
   isDateVisibile(): boolean
   setNorthArrowVisibility(isVisible: boolean): void
   isNorthArrowVisible(): boolean
+  setLegendVisibility(isVisible: boolean): void
+  isLegendVisible(): boolean
   getAllPaperFormats(): JAppPaperFormat[]
   setPaperFormat(format: JAppPaperFormat | string): void
   getPaperFormat(): JAppPaperFormat
