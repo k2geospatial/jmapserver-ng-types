@@ -119,11 +119,13 @@ export interface JAppPrintState {
   isOrientationPortrait: boolean
   base64Image: string
   pageTitle: string
+  /** @deprecated No longer supported. Has no effect. */
   pageSubTitle: string
   isDateVisible: boolean
   isNorthArrowVisible: boolean
   isScaleVisible: boolean
   isLegendVisible: boolean
+  /** @deprecated No longer supported. Has no effect. */
   isHiResolution: boolean
   legendTitle: string
   legendSubTitle: string
@@ -352,7 +354,9 @@ export interface JAppPrintService {
   isScaleControlVisible(): boolean
   setPageTitle(title: string): void
   getPageTitle(): string
+  /** @deprecated No longer supported. Has no effect. */
   setPageSubTitle(subTitle: string): void
+  /** @deprecated No longer supported. Has no effect. */
   getPageSubTitle(): string
   setDateVisibility(isVisible: boolean): void
   isDateVisibile(): boolean
@@ -367,7 +371,9 @@ export interface JAppPrintService {
   isOrientationPortrait(): boolean
   setFileType(fileType: JAPP_PRINT_FILE_TYPES): void
   getFileType(): JAPP_PRINT_FILE_TYPES
+  /** @deprecated No longer supported. Has no effect. */
   setHiResolution(isHiResolution: boolean): void
+  /** @deprecated No longer supported. Has no effect. */
   getHiResolution(): boolean
   takeCapture(returnAsScreenCaptureResult?: boolean): Promise<void | JAppPrintCaptureResult>
 }

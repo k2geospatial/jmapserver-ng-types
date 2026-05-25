@@ -2181,28 +2181,14 @@ declare namespace JMap {
       /**
        * **JMap.Application.Print.setPageSubTitle**
        *
-       * Sets the subtitle displayed in the bottom of the print layout.
-       *
-       * @throws if subTitle is not a string
-       * @param subTitle The subtitle displayed in the bottom of the print layout
-       * @example
-       * ```ts
-       * // set subtitle
-       * JMap.Application.Print.setPageSubTitle("My custom subtitle")
-       * ```
+       * @deprecated No longer supported. Has no effect.
        */
       function setPageSubTitle(subTitle: string): void
 
       /**
        * **JMap.Application.Print.getPageSubTitle**
        *
-       * Returns the subtitle displayed in the bottom of the print layout.
-       *
-       * @example
-       * ```ts
-       * // returns the displayed subtitle
-       * JMap.Application.Print.getPageSubTitle()
-       * ```
+       * @deprecated No longer supported. Has no effect.
        */
       function getPageSubTitle(): string
 
@@ -2408,31 +2394,14 @@ declare namespace JMap {
       /**
        * **JMap.Application.Print.setHiResolution**
        *
-       * Sets the parameter determining if the map will be exported in hi resolution or not.
-       *
-       * @deprecated Hi resolution is now always enabled by default. This method will be removed in a future version.
-       * @throws if isHiResolution is not a boolean
-       * @param isHiResolution true or false
-       * @example
-       * ```ts
-       * // set export mode to hi resolution
-       * JMap.Application.Print.setHiResolution(true)
-       * ```
+       * @deprecated No longer supported. Has no effect.
        */
       function setHiResolution(isHiResolution: boolean): void
 
       /**
        * **JMap.Application.Print.getHiResolution**
        *
-       * Returns true if the map export is set to hi resolution, false otherwise.
-       *
-       * @deprecated Hi resolution is now always enabled by default. This method will be removed in a future version.
-       * @example
-       * ```ts
-       * // get export resolution
-       * JMap.Application.Print.getHiResolution()
-       * // true
-       * ```
+       * @deprecated No longer supported. Has no effect.
        */
       function getHiResolution(): boolean
 
