@@ -125,6 +125,8 @@ export interface JAppPrintState {
   isNorthArrowVisible: boolean
   isScaleVisible: boolean
   isLegendVisible: boolean
+  customContent: HTMLElement | null
+  customContentWidthInPercent: number
   /** @deprecated No longer supported. Has no effect. */
   isHiResolution: boolean
   legendTitle: string
@@ -364,6 +366,8 @@ export interface JAppPrintService {
   isNorthArrowVisible(): boolean
   setLegendVisibility(isVisible: boolean): void
   isLegendVisible(): boolean
+  setCustomContentWidthInPercent(percent: number): void
+  setCustomContent(html: HTMLElement | null): void
   getAllPaperFormats(): JAppPaperFormat[]
   setPaperFormat(format: JAppPaperFormat | string): void
   getPaperFormat(): JAppPaperFormat
