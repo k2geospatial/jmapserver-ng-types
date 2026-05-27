@@ -2283,6 +2283,50 @@ declare namespace JMap {
       function setLegendVisibility(isVisible: boolean): void
 
       /**
+       * **JMap.Application.Print.setCustomContentWidthInPercent**
+       *
+       * Sets the width used by the custom content area as a percentage of the available width left by the print legend.
+       *
+       * The value must be between 0 and 100.
+       *
+       * @throws if percent is not a finite number between 0 and 100
+       * @param percent The percentage of the available width used by the custom content area
+       * @example
+       * ```ts
+       * // Use 40 percent of the available width left by the print legend
+       * JMap.Application.Print.setCustomContentWidthInPercent(40)
+       * ```
+       */
+      function setCustomContentWidthInPercent(percent: number): void
+
+      /**
+       * **JMap.Application.Print.setCustomContent**
+       *
+       * Sets the custom HTML content displayed in the print layout, in the available area left by the print legend.
+       *
+       * The custom content is displayed top-right aligned. Pass null to clear the custom content.
+       *
+       * @throws if html is not an HTMLElement or null
+       * @param html The HTML element to display in the print layout, or null to clear it
+       * @example
+       * ```ts
+       * // Add custom content
+       * const content = document.createElement("div")
+       * content.innerHTML = `
+       *   <svg width="120" height="60" viewBox="0 0 120 60">
+       *     <rect width="120" height="60" fill="white" />
+       *     <circle cx="30" cy="30" r="20" fill="red" />
+       *   </svg>
+       * `
+       * JMap.Application.Print.setCustomContent(content)
+       *
+       * // Clear custom content
+       * JMap.Application.Print.setCustomContent(null)
+       * ```
+       */
+      function setCustomContent(html: HTMLElement | null): void
+
+      /**
        * **JMap.Application.Print.getAllPaperFormats**
        *
        * Returns all available paper formats.
