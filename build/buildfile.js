@@ -167,6 +167,17 @@ function commit() {
   console.log()
   execSync(`git add .`, { cwd: ROOT_DIR })
   console.log(`GIT : all documentation files staged for commit`)
+
+  try {
+    execSync(`git diff --cached --quiet`, { cwd: ROOT_DIR })
+    console.log(`GIT : no documentation changes to commit`)
+    return
+  } catch (error) {
+    if (error.status !== 1) {
+      throw error
+    }
+  }
+
   const commitMessage = `Publish version '${newNpmVersion}' of documentation`
   execSync(`git commit -m "${commitMessage}"`, { cwd: ROOT_DIR })
   console.log(`GIT : commit done (message="${commitMessage}")`)
