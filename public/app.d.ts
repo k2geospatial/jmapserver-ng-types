@@ -2529,11 +2529,15 @@ declare namespace JMap {
        * Returns the current query form data.
        *
        * If there is no active form, warns in the console and returns an empty object {}.
+       * Throws if the active form needs metadata that has not finished loading.
+       * Values explicitly supplied with setDefaultData can be returned before metadata loads.
+       *
+       * @throws if the active query form metadata is unavailable and no default data was set
        *
        * @example
        * ```ts
        * // returns the current query form data
-       * JMap.Application.Print.getDefaultData()
+       * JMap.Application.Query.getDefaultData()
        * ```
        */
       function getDefaultData(): { [id: string]: any }
